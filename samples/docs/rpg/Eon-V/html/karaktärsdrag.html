@@ -1,0 +1,102 @@
+<mmr-resize-handle>
+    <details open class="section">
+        <summary>
+            <h2>Karktärsdrag</h2>
+        </summary>
+        <div>
+            <table>
+                <thead>
+                    <th></th>
+                    <th>Primärt</th>
+                    <th>Sekundärt</th>
+                    <th>Extra sekundärt</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Namn</th>
+                        <td><div><input /></div></td>
+                        <td><div><input /></div></td>
+                        <td><div><input /></div></td>
+                    </tr>
+                    <tr>
+                        <th>Nivå I</th>
+                        <td>
+                            <div><input type="checkbox" /><input /></div>
+                        </td>
+                        <td>
+                            <div><input type="checkbox" /><input /></div>
+                        </td>
+                        <td>
+                            <div><input type="checkbox" /><input /></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Nivå II</th>
+                        <td>
+                            <div><input type="checkbox" /><input /></div>
+                        </td>
+                        <td>
+                            <div><input type="checkbox" /><input /></div>
+                        </td>
+                        <td>
+                            <div><input type="checkbox" /><input /></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Nivå III</th>
+                        <td>
+                            <div><input type="checkbox" /><input /></div>
+                        </td>
+                        <td>
+                            <div><input type="checkbox" /><input /></div>
+                        </td>
+                        <td>
+                            <div><input type="checkbox" /><input /></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td>
+                            <div>
+                                <label>Låst</label><input type="checkbox" />
+                                <label>Svaghet</label><input type="checkbox" />
+                                <label>Tvivel</label><input type="checkbox" />
+                                <label>Störning</label><input type="checkbox" />
+                            </div>
+                        </td>
+
+                        <td>
+                            <div>
+                                <label>Låst</label><input type="checkbox" />
+                                <label>Svaghet</label><input type="checkbox" />
+                                <label>Tvivel</label><input type="checkbox" />
+                                <label>Störning</label><input type="checkbox" />
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <label>Låst</label><input type="checkbox" />
+                                <label>Svaghet</label><input type="checkbox" />
+                                <label>Tvivel</label><input type="checkbox" />
+                                <label>Störning</label><input type="checkbox" />
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <details>
+            <summary>
+                <p>Regler</p>
+            </summary>
+            <p>Nivå I ger 1 Fokus (0 om Svaghet eller Tvivel).</p>
+            <p>Nivå II ger antingen 3 Fokus (2 om Svaghet), 1 Välmående (ej om Svaghet) eller en Omvälvande
+                händelse. Ger inget om Tvivel.</p>
+            <p>Nivå III ger 2 Välmående, återhämtar all Fokus samt ger en Livsavgörande händelse.</p>
+            <p>En Omvälvande händelse läker antingen en Efterverkning, låser upp ett Karaktärsdrag eller tar bort en
+                Svaghet från ett Karaktärsdrag.</p>
+            <p>En Livsavgörande händelse läker en Störning och samtliga Efterverkningar, eller tar bort låsningar
+                och svagheter från samtliga Karaktärsdrag</p>
+        </details>
+    </details>
+</mmr-resize-handle>

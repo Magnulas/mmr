@@ -1,0 +1,41 @@
+<mmr-resize-handle>
+    <details open class="section">
+        <summary>
+            <h2>Fokus & välmående</h2>
+        </summary>
+        <mmr-state-counter max="10" style="display: grid; grid-template-columns: repeat(5, 1fr);">
+            <template>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="11" stroke="black" fill="transparent" stroke-width="1"></circle>
+                </svg>
+            </template>
+            <template>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1"></circle>
+                    <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                </svg>
+            </template>
+            <template>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1"></circle>
+                    <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                    <line x1="19" y2="19" x2="5" y1="5" stroke="black" stroke-width="2"></line>
+                </svg>
+            </template>
+        </mmr-state-counter>
+        <details>
+            <summary>
+                <p>Regler</p>
+            </summary>
+            <div>
+                <p>+1T6: 1 Fokus</p>
+                <p>+2T6: 3 Fokus</p>
+                <p>+3T6: 6 Fokus</p>
+                <p>+4T6: 10 Fokus</p>
+            </div>
+            <p>Använt Fokus: Snedstreck</p>
+            <p>Minskat Välmående: Kryss</p>
+            <p>Minskat maximalt Välmående: Ifyllt</p>
+        </details>
+    </details>
+</mmr-resize-handle>
