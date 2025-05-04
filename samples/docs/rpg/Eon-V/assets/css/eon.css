@@ -1,0 +1,341 @@
+/*Layout*/
+#character-sheet::part(first cell) {
+    margin: auto;
+}
+
+.character-sheet-header {
+    width: 826px;
+    height: 406px;
+}
+
+/*Fonts*/
+@font-face {
+    font-family: GoudyDaval;
+    src: url("https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/fonts/sorts-mill-goudy-master/OFLGoudyStM.otf") format("opentype");
+}
+
+@font-face {
+    font-family: PirataOne;
+    src: url("https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/fonts/pirata-one/PirataOne-Regular.ttf") format("truetype");
+}
+
+body {
+    font-family: PirataOne;
+}
+
+h2 {
+    font-weight: normal
+}
+
+/*Font apperance*/
+label,
+th,
+td,
+textarea,
+div[contenteditable],
+input,
+p {
+    font-family: GoudyDaval;
+    font-size: 12pt;
+
+}
+
+p {
+    font-style: italic;
+    margin: 0px;
+    font-size: 10pt;
+}
+
+label,
+th {
+    font-weight: bold;
+}
+
+td label {
+    font-weight: normal;
+}
+
+.name {
+    margin: 0px;
+    font-size: 14pt;
+    text-align: center
+}
+
+/*Input*/
+input[type="number"] {
+    min-width: 1ch;
+    width: 5ch;
+}
+
+input:not(:hover)::-webkit-outer-spin-button,
+input:not(:hover)::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]:not(:hover) {
+    -moz-appearance: textfield;
+}
+
+textarea,
+div[contenteditable],
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    height: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+input:not([type]),
+input[type="text"] {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+textarea,
+div[contenteditable] {
+    display: block;
+    width: 100%;
+}
+
+/*Tables*/
+td>div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+table {
+    width: 100%;
+}
+
+summary input {
+    width: 100%;
+}
+
+/*Font layout*/
+table {
+    text-align: center;
+}
+
+tbody>tr>th:first-child {
+    text-align: left;
+}
+
+tbody>tr>th:last-child {
+    text-align: right;
+}
+
+td {
+    text-wrap: nowrap;
+}
+
+td {
+    vertical-align: top;
+}
+
+/*Images*/
+body {
+    background-image: url('https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/helmgast/background.jpg');
+}
+
+/*Imgage layout*/
+img,
+mmr-embed {
+    min-width: 64px;
+    min-height: 64px;
+    background-position: center;
+    background-size: auto;
+}
+
+mmr-embed {
+    border: 1px solid lightgrey
+}
+
+div:has(>img:only-child),
+div:has(>mmr-embed:only-child) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div:has(>mmr-embed:only-child) {
+    overflow: hidden;
+}
+
+div>mmr-embed:only-child {
+    height: inherit;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div>img:only-child {
+    width: initial;
+    height: initial;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*Overflow*/
+details.section> :not(summary) {
+    overflow: auto;
+}
+
+/*Resize*/
+mmr-resize-handle {
+    display: flex;
+    flex-direction: column;
+}
+
+mmr-resize-handle>mmr-svg-painter:only-child {
+    width: 100%;
+    flex-grow: 1;
+}
+
+mmr-resize-handle>textarea:only-child {
+    resize: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+mmr-resize-handle:has(>textarea:only-child) {
+    height: 24px;
+}
+
+mmr-resize-handle:has(>textarea:only-child)::part(top),
+mmr-resize-handle:has(>textarea:only-child)::part(left),
+mmr-resize-handle:has(>textarea:only-child)::part(right) {
+    display: none;
+}
+
+div[contenteditable] {
+    resize: vertical;
+    overflow: auto;
+}
+
+/*NOTE: This does not work in Firefox. We can work around it by nesting an element and resizing it, but then that element would have to apply its width to the th element otherwise resizing columns wont work*/
+thead th:not(:only-of-type):not(:empty) {
+    resize: horizontal;
+    overflow: hidden;
+}
+
+mmr-dynamic-grid {
+    --resize-handle-size: 8px;
+}
+
+mmr-resize-handle {
+    --handle-size: var(--resize-handle-size)
+}
+
+mmr-embed {
+    resize: both;
+    overflow: hidden;
+}
+
+mmr-dynamic-grid>mmr-resize-handle {
+    padding-left: var(--resize-handle-size);
+    padding-right: var(--resize-handle-size);
+    padding-top: var(--resize-handle-size);
+    padding-bottom: var(--resize-handle-size);
+}
+
+mmr-resize-handle:hover::part(left),
+mmr-resize-handle:hover::part(right),
+mmr-resize-handle:hover::part(top),
+mmr-resize-handle:hover::part(bottom) {
+    background: rgba(0, 0, 0, 0.1)
+}
+
+mmr-dynamic-grid>details:not([open]) {
+    resize: horizontal;
+    overflow: hidden;
+}
+
+/*Details*/
+summary>h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
+details.section>div {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+summary {
+    display: flex;
+}
+
+summary>*:not(input):first-child {
+    border-bottom: 1px solid black;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+summary>*:not(input):first-child>* {
+    pointer-events: all;
+}
+
+summary:has(>input):before {
+    display: inline-block;
+    margin-right: 8px;
+    color: black;
+}
+
+details:not([open])>summary:has(>input)::before {
+    content: '🞂';
+}
+
+details[open]>summary:has(>input)::before {
+    content: '🞃';
+}
+
+/*Drag and drop*/
+
+/*Apply a border so the contets don't resize when dragging*/
+mmr-dynamic-grid,
+mmr-dynamic-grid::part(cell) {
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+/*Style the grid we're dragging over*/
+mmr-dynamic-grid:state(dragover),
+/*Style the grid cell we're dragging over*/
+mmr-dynamic-grid::part(cell):state(dragover) {
+    border: 1px dashed black;
+}
+
+/*Style the dragged grid cell*/
+mmr-dynamic-grid::part(dragging cell),
+mmr-dynamic-grid:state(dragover)::part(dragging cell) {
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+/*Style the placeholder for the grid*/
+mmr-dynamic-grid:state(dragover)::part(placeholder) {
+    background-color: rgba(0, 0, 255, 0.3);
+}
+
+/*Style the placeholder for the grid cells*/
+mmr-dynamic-grid:state(dragovercell)::part(placeholder) {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+/*Style the cell when dragging focus is on the the grid*/
+mmr-dynamic-grid:state(dragover)::part(cell) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*Padding so we can drag to the left/right edge*/
+mmr-dynamic-grid {
+    padding-left: 10px;
+    padding-right: 10px;
+}

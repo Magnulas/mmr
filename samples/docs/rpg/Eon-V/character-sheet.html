@@ -1,0 +1,1937 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/css/eon.css">
+    <script src="https://magnulas.github.io/mmr/lib/mmr.bundle.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.myHooks.saveWebPageOnExitHook()
+        window.myHooks.loadWebPageOnLoadHook()
+        window.myHooks.saveWebPageHook()
+    </script>
+</head>
+<body>
+    <mmr-dynamic-grid id="character-sheet"
+        order="slot1,slot2,slot3,slot4,slot5,slot6,slot7,slot8,slot9,slot10,slot11,slot12,slot13,slot14,slot15,slot16,slot17,slot18,slot19,slot20,slot21,slot22,slot23,slot24,slot25,slot26,slot27,slot28,slot29,slot30,slot31,slot32,slot33,slot34,slot35,slot36,slot37,slot38,slot39,slot40,slot41,slot42">
+        <mmr-resize-handle class="character-sheet-header" slot="slot1" style="grid-column-end: span 42; grid-row-end: span 21;">
+            <mmr-svg-painter snapx="20" snapy="20" snaprotate="10">
+                <svg>
+                    <defs>
+                        <mask id="59dd34bb-5287-4dc6-93f9-5a334b1b2f1d">
+                            <circle cx="246" cy="246" r="123" fill="white"
+                                transform="matrix(1.00745, 0, 0, 1.00745, 416.083, -53.9167)">
+                            </circle>
+                        </mask>
+                    </defs>
+                    <foreignObject width="247.8333282470703" height="247.83334350585938" x="540" y="70"
+                        mask="url(#59dd34bb-5287-4dc6-93f9-5a334b1b2f1d)">
+                        <mmr-embed style="width: 246px; height: 246px" xlmns="http://www.w3.org/1999/xhtml">
+                        </mmr-embed>
+                    </foreignObject>
+                    <image transform="matrix(1, 0, 0, 1, 513, 51)" style="pointer-events: none;"
+                        href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/helmgast/portrait.png">
+                    </image>
+                    <image transform="matrix(1, 0, 0, 1, 308, 3)"
+                        href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/helmgast/title.png">
+                    </image>
+                    <image href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/helmgast/line.png"
+                        style="flex-grow: 1;" transform="matrix(1, 0, 0, 1, 68, 390)"></image>
+                    <image href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/helmgast/sword.png"
+                        style="flex-grow: 1;" transform="matrix(1, 0, 0, 1, 0, 54)"></image>
+                    <foreignObject x="230" y="340" height="60" width="400">
+                        <div style="width:100%;height:100%;display:flex;flex-direction:column"
+                            xlmns="http://www.w3.org/1999/xhtml" draggable="true">
+                            <input class="name" style="width:100%; flex-grow:initial">
+                            <label class="name">Namn</label>
+                        </div>
+                    </foreignObject>
+                </svg>
+            </mmr-svg-painter>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot2" draggable="true" style="grid-column-end: span 16; grid-row-end: span 16;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Rollpersonen</h2>
+                </summary>
+                <div><label>Folkslag</label><input></div>
+                <div><label>Kön</label><input></div>
+                <div><label>Ålder</label><input></div>
+                <div><label>Religion</label><input></div>
+                <div><label>Värv</label><input></div>
+                <div><label>Hemland</label><input></div>
+                <div><label>Hemort</label><input></div>
+                <!--<div><label>Födelsemånad</label><input /></div>-->
+                <div><label>Levnadsstandard</label><input></div>
+                <div><label>Längd</label><input></div>
+                <div><label>Vikt</label><input></div>
+                <div><label>Vapenarm</label><input></div>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot3" draggable="true" style="grid-column-end: span 21; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Relationer &amp; andra rollpersoner</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Namn</th>
+                                <th>Anteckningar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td>
+                                    <details>
+                                        <summary><input></summary>
+                                        <mmr-embed></mmr-embed>
+                                    </details>
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot4" draggable="true" style="grid-column-end: span 12; grid-row-end: span 5;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Utseende och särdrag</h2>
+                </summary>
+                <mmr-block>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                </mmr-block>
+            </details>
+        </mmr-resize-handle>ze-handle&gt;
+        <mmr-resize-handle slot="slot5" draggable="true" style="grid-column-end: span 11; grid-row-end: span 5;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Djur och följeslagare</h2>
+                </summary>
+                <mmr-block>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                </mmr-block>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot6" draggable="true" style="grid-column-end: span 10; grid-row-end: span 5;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Kretsar</h2>
+                </summary>
+                <mmr-block>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                </mmr-block>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot7" draggable="true" style="grid-column-end: span 36; grid-row-end: span 15;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Karktärsdrag</h2>
+                </summary>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Primärt</th>
+                                <th>Sekundärt</th>
+                                <th>Extra sekundärt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Namn</th>
+                                <td>
+                                    <div><input></div>
+                                </td>
+                                <td>
+                                    <div><input></div>
+                                </td>
+                                <td>
+                                    <div><input></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Nivå I</th>
+                                <td>
+                                    <div><input type="checkbox"><input></div>
+                                </td>
+                                <td>
+                                    <div><input type="checkbox"><input></div>
+                                </td>
+                                <td>
+                                    <div><input type="checkbox"><input></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Nivå II</th>
+                                <td>
+                                    <div><input type="checkbox"><input></div>
+                                </td>
+                                <td>
+                                    <div><input type="checkbox"><input></div>
+                                </td>
+                                <td>
+                                    <div><input type="checkbox"><input></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Nivå III</th>
+                                <td>
+                                    <div><input type="checkbox"><input></div>
+                                </td>
+                                <td>
+                                    <div><input type="checkbox"><input></div>
+                                </td>
+                                <td>
+                                    <div><input type="checkbox"><input></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <div>
+                                        <label>Låst</label><input type="checkbox">
+                                        <label>Svaghet</label><input type="checkbox">
+                                        <label>Tvivel</label><input type="checkbox">
+                                        <label>Störning</label><input type="checkbox">
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <div>
+                                        <label>Låst</label><input type="checkbox">
+                                        <label>Svaghet</label><input type="checkbox">
+                                        <label>Tvivel</label><input type="checkbox">
+                                        <label>Störning</label><input type="checkbox">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div>
+                                        <label>Låst</label><input type="checkbox">
+                                        <label>Svaghet</label><input type="checkbox">
+                                        <label>Tvivel</label><input type="checkbox">
+                                        <label>Störning</label><input type="checkbox">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <details>
+                    <summary>
+                        <p>Regler</p>
+                    </summary>
+                    <p>Nivå I ger 1 Fokus (0 om Svaghet eller Tvivel).</p>
+                    <p>Nivå II ger antingen 3 Fokus (2 om Svaghet), 1 Välmående (ej om Svaghet) eller en Omvälvande
+                        händelse. Ger inget om Tvivel.</p>
+                    <p>Nivå III ger 2 Välmående, återhämtar all Fokus samt ger en Livsavgörande händelse.</p>
+                    <p>En Omvälvande händelse läker antingen en Efterverkning, låser upp ett Karaktärsdrag eller tar
+                        bort en
+                        Svaghet från ett Karaktärsdrag.</p>
+                    <p>En Livsavgörande händelse läker en Störning och samtliga Efterverkningar, eller tar bort
+                        låsningar
+                        och svagheter från samtliga Karaktärsdrag</p>
+                </details>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot8" draggable="true" style="grid-column-end: span 12; grid-row-end: span 13;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Attribut</h2>
+                </summary>
+                <div>
+                    <label>Förflyttning</label>
+                    <div><span><input type="number">T6+<input type="number"></span></div>
+                </div>
+                <div>
+                    <label>Intryck</label>
+                    <div><input type="number">T6+<input type="number"></div>
+                </div>
+                <div>
+                    <label>Kroppsbyggnad</label>
+                    <div><input type="number">T6+<input type="number"></div>
+                </div>
+                <div>
+                    <label>Livskraft</label>
+                    <div><input type="number">T6+<input type="number"></div>
+                </div>
+                <div>
+                    <label>Reaktion</label>
+                    <div><input type="number">T6+<input type="number"></div>
+                </div>
+                <div>
+                    <label>Självkontroll</label>
+                    <div><input type="number">T6+<input type="number"></div>
+                </div>
+                <div>
+                    <label>Vaksamhet</label>
+                    <div><input type="number">T6+<input type="number"></div>
+                </div>
+                <div>
+                    <label>Visdom</label>
+                    <div><input type="number"></div>
+                </div>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot9" draggable="true" style="grid-column-end: span 10; grid-row-end: span 7;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Fokus &amp; välmående</h2>
+                </summary>
+                <mmr-state-counter max="10" style="display: grid; grid-template-columns: repeat(5, 1fr);" tabindex="0"
+                    value="">
+                    <template>
+                        <svg width="24" height="24">
+                            <circle cx="12" cy="12" r="11" stroke="black" fill="transparent" stroke-width="1"></circle>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="24" height="24">
+                            <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1"></circle>
+                            <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="24" height="24">
+                            <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1"></circle>
+                            <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                            <line x1="19" y2="19" x2="5" y1="5" stroke="black" stroke-width="2"></line>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+                <details>
+                    <summary>
+                        <p>Regler</p>
+                    </summary>
+                    <div>
+                        <p>+1T6: 1 Fokus</p>
+                        <p>+2T6: 3 Fokus</p>
+                        <p>+3T6: 6 Fokus</p>
+                        <p>+4T6: 10 Fokus</p>
+                    </div>
+                    <p>Använt Fokus: Snedstreck</p>
+                    <p>Minskat Välmående: Kryss</p>
+                    <p>Minskat maximalt Välmående: Ifyllt</p>
+                </details>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot10" draggable="true" style="grid-column-end: span 12; grid-row-end: span 8;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Avtrubbning</h2>
+                </summary>
+                <div style="display: grid; grid-template-columns: auto repeat(5, 1fr);text-align: center">
+
+                    <label style="text-align: left;">Utmattning</label>
+                    <mmr-state-counter max="5"
+                        style="grid-column: 2 / span 5; display: grid; grid-template-columns: repeat(5,auto);"
+                        tabindex="0" value="">
+                        <template>
+                            <svg width="16" height="16">
+                                <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                    stroke-width="1">
+                                </rect>
+                            </svg>
+                        </template>
+                        <template>
+                            <svg width="16" height="16">
+                                <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                            </svg>
+                        </template>
+                    </mmr-state-counter>
+
+                    <label style="text-align: left;">Våld</label>
+                    <mmr-state-counter max="5"
+                        style="grid-column: 2 / span 5; display: grid; grid-template-columns: repeat(5,auto);"
+                        tabindex="0" value="">
+                        <template>
+                            <svg width="16" height="16">
+                                <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                    stroke-width="1">
+                                </rect>
+                            </svg>
+                        </template>
+                        <template>
+                            <svg width="16" height="16">
+                                <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                            </svg>
+                        </template>
+                    </mmr-state-counter>
+
+                    <label style="text-align: left;">Övernaturligt</label>
+                    <mmr-state-counter max="5"
+                        style="grid-column: 2 / span 5; display: grid; grid-template-columns: repeat(5,auto);"
+                        tabindex="0" value="">
+                        <template>
+                            <svg width="16" height="16">
+                                <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                    stroke-width="1">
+                                </rect>
+                            </svg>
+                        </template>
+                        <template>
+                            <svg width="16" height="16">
+                                <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                            </svg>
+                        </template>
+                    </mmr-state-counter>
+
+                    <span></span>
+                    <span>+5</span>
+                    <span>+10</span>
+                    <span>+15</span>
+                    <span>+20</span>
+                    <span>+25</span>
+
+
+
+                </div>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot11" draggable="true" style="grid-column-end: span 20; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Språk</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Talspråk</th>
+                                <th>Skriftspråk</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td><input></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot12" draggable="true" style="grid-column-end: span 16; grid-row-end: span 21;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Sociala färdigheter</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input value="Argumenera"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Berättarkonst"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Charm"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Dupera"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Genomskåda"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Handel"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Hovliv"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Injaga fruktan"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Ledarskap"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Skumraskaffärer"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Spel &amp; dobbel"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Sång &amp; musik"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot13" draggable="true" style="grid-column-end: span 16; grid-row-end: span 22;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Kunskapsfärdigheter</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input value="Filosofi"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Geografi"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Gifter &amp; droger"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Historia"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Kalkylera"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Krigsföring"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Kulturkännedom"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Lagkunskap"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Läkekonst"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Ockultism"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Teologi"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Teoretisk magi"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Undervisa"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot14" draggable="true" style="grid-column-end: span 16; grid-row-end: span 16;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Vildmarksfärdigheter</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input value="Genomsöka"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Jakt &amp; fiske"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Naturlära"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Orientera"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Rida"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Sjömannaskap"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Speja"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Spåra"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Vildmarksvana"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot15" draggable="true" style="grid-column-end: span 16; grid-row-end: span 16;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Rörelsefärdigheter</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input value="Dansa"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Fingerfärdighet"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Gömma"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Hoppa"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Klättra"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Marsch"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Simma"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Smyga"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Undvika"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot16" draggable="true" style="grid-column-end: span 16; grid-row-end: span 7;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Övriga färdigheter</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot17" draggable="true" style="grid-column-end: span 16; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Stridsfärdigheter</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input value="Slagsmål"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot18" draggable="true" style="grid-column-end: span 16; grid-row-end: span 12;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Mystikfärdigheter</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input value="Cermoni"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Förnimma"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Förvränga"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Harmonisera"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Kanalisera"></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td><input type="number">T6+<input type="number"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot19" draggable="true" style="grid-column-end: span 10; grid-row-end: span 5;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Erfarenhet</h2>
+                </summary>
+                <div>
+                    <label>Oanvänd erfarnhet</label>
+                    <input type="number">
+                </div>
+                <div>
+                    <details style="width: min-content;">
+                        <summary>
+                            <p>Regler</p>
+                        </summary>
+                        <div>
+                            <h3>Ny kunskap</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Visdom</th>
+                                        <th>Erfarenhetskostnad</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>4-5</td>
+                                        <td>10</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6-7</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8-9</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10-11</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12-15</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr>
+                                        <td>16-19</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20+</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3>Attributt</h3>
+                            <p>+1 i ett Attribut / 8 erfarenhet</p>
+                            <p>Ett enskilt attribut kan maximalt höjas 4 gånger</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><label>Förflyttning</label></td>
+                                        <td><input type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Intryck</label></td>
+                                        <td><input type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Kroppsbyggnad</label></td>
+                                        <td><input type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Livskraft</label></td>
+                                        <td><input type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Reaktion</label></td>
+                                        <td><input type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Självkontroll</label></td>
+                                        <td><input type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Vaksamhet</label></td>
+                                        <td><input type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label>Visdom</label></td>
+                                        <td><input type="number"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <h3>Färdigheter</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>+1 vid 2T6</td>
+                                        <td>1 erfarenhet</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+1 vid 3T6</td>
+                                        <td>2 erfarenhet</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+1 vid 4T6</td>
+                                        <td>4 erfarenhet</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+1 vid 5T6</td>
+                                        <td>8 erfarenhet</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+1 vid 6T6</td>
+                                        <td>16 erfarenhet</td>
+                                    </tr>
+                                    <tr>
+                                        <td>+1 vid (+1T6)</td>
+                                        <td>(x2)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </details>
+                </div>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot20" draggable="true" style="grid-column-end: span 12; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Särskilda egenskaper</h2>
+                </summary>
+                <mmr-block>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                </mmr-block>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot21" draggable="true" style="grid-column-end: span 10; grid-row-end: span 4;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Regelanteckningar</h2>
+                </summary>
+                <mmr-block>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                </mmr-block>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot22" draggable="true" style="grid-column-end: span 12; grid-row-end: span 14;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Belastning</h2>
+                </summary>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Summa</th>
+                                <th>Avdrag</th>
+                                <th>Grundutm.</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="radio" name="belastning"
+                                        data-formula-checked="@DOM('#total-belastning').select(value) $ (v => v<9)(this[0])">
+                                </td>
+                                <td>0-8</td>
+                                <td>-</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="belastning"
+                                        data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => 9 <= v &amp;&amp; v < 17)(this[0])">
+                                </td>
+                                <td>9-16</td>
+                                <td>-</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="belastning"
+                                        data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => 17 <= v &amp;&amp; v < 25)(this[0])">
+                                </td>
+                                <td>17-24</td>
+                                <td>-1T6</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="belastning"
+                                        data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => 25 <= v &amp;&amp; v < 33)(this[0])">
+                                </td>
+                                <td>25-32</td>
+                                <td>-2T6</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="belastning"
+                                        data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => v>=33)(this[0])">
+                                </td>
+                                <td>33-40</td>
+                                <td>-2T6</td>
+                                <td>6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <details>
+                    <summary>
+                        <p>Regler</p>
+                    </summary>
+                    <p>Avdrag gäller:</p>
+                    <p>Förflyttning, Reaktion &amp; Rörelsefärdigheter</p>
+
+                </details>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot23" draggable="true" style="grid-column-end: span 36; grid-row-end: span 15;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Rustning</h2>
+                </summary>
+                <mmr-table>
+                    <table id="rustning">
+                        <thead>
+                            <tr>
+                                <th>Rustningsdel</th>
+                                <th>Hugg</th>
+                                <th>Kross</th>
+                                <th>Stick</th>
+                                <th>Belastning</th>
+                                <th>Egenskaper</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td>
+                                    <div>
+                                        <input type="checkbox">
+                                        <input value="1 Huvud" style="width:9ch"
+                                            onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                        <input>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                            <tr draggable="true">
+                                <td>
+                                    <div>
+                                        <input type="checkbox">
+                                        <input value="2-4 Torso" style="min-width:1ch;width:9ch"
+                                            onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                        <input>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                            <tr draggable="true">
+                                <td>
+                                    <div>
+                                        <input type="checkbox">
+                                        <input value="5-6 V. arm" style="min-width:1ch;width:9ch"
+                                            onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                        <input>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                            <tr draggable="true">
+                                <td>
+                                    <div>
+                                        <input type="checkbox">
+                                        <input value="7-8 H. arm" style="min-width:1ch;width:9ch"
+                                            onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                        <input>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                            <tr draggable="true">
+                                <td>
+                                    <div>
+                                        <input type="checkbox">
+                                        <input value="9 V. ben" style="min-width:1ch;width:9ch"
+                                            onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                        <input>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                            <tr draggable="true">
+                                <td>
+                                    <div>
+                                        <input type="checkbox">
+                                        <input value="10 H. ben" style="min-width:1ch;width:9ch"
+                                            onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                        <input>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="number" disabled="" id="total-belastning"
+                                        data-formula-value="@DOM('#rustning tbody td:first-of-type:has(input:checked) ~ td:nth-of-type(5) > input').select(value) $ this.sum()">
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot24" draggable="true" style="grid-column-end: span 11; grid-row-end: span 19;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Skadeintervall</h2>
+                </summary>
+                <div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Skada</th>
+                                <th>Utmattn.</th>
+                                <th>Skadetabell</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1-4</td>
+                                <td>+1</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>5-9</td>
+                                <td>+2</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>10-14</td>
+                                <td>+4</td>
+                                <td>1T10</td>
+                            </tr>
+                            <tr>
+                                <td>15-19</td>
+                                <td>+6</td>
+                                <td>1T10+2</td>
+                            </tr>
+                            <tr>
+                                <td>20-24</td>
+                                <td>+8</td>
+                                <td>1T10+4</td>
+                            </tr>
+                            <tr>
+                                <td>25-29</td>
+                                <td>+10</td>
+                                <td>1T10+6</td>
+                            </tr>
+                            <tr>
+                                <td>30-34</td>
+                                <td>+12</td>
+                                <td>1T10+8</td>
+                            </tr>
+                            <tr>
+                                <td>35-39</td>
+                                <td>+14</td>
+                                <td>1T10+10</td>
+                            </tr>
+                            <tr>
+                                <td>40-44</td>
+                                <td>+16</td>
+                                <td>1T10+12</td>
+                            </tr>
+                            <tr>
+                                <td>(+5)</td>
+                                <td>(+2)</td>
+                                <td>(+2)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot25" draggable="true" style="grid-column-end: span 36; grid-row-end: span 14;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Beväpning</h2>
+                </summary>
+                <mmr-table>
+                    <table style="text-align: left;">
+                        <thead>
+                            <tr>
+                                <th>Närstridsvapen</th>
+                                <th>Färdighet</th>
+                                <th>Hugg</th>
+                                <th>Kross</th>
+                                <th>Stick</th>
+                                <th>Egenskaper</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input type="text" value="Slagsmål"></td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <thead>
+                            <tr>
+                                <th>Avståndsvapen</th>
+                                <th>Färdighet</th>
+                                <th>Räckvidd</th>
+                                <th>Typ</th>
+                                <th>Skada</th>
+                                <th>Egenskaper</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input style="width: 100px">
+                                </td>
+                                <td>
+                                    <input style="width: 60px">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                        <thead>
+                            <tr>
+                                <th>Försvar</th>
+                                <th>Färdighet</th>
+                                <th>Närstrid</th>
+                                <th>Avstånd</th>
+                                <th>Skydd</th>
+                                <th>Egenskaper</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input value="Undvika"></td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <textarea>Kontring kan ej väljas</textarea>
+                                </td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">T6+<input type="number">
+                                </td>
+                                <td>
+                                    <input type="number">
+                                </td>
+                                <td>
+                                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+                <mmr-table>
+
+                </mmr-table>
+                <mmr-table>
+
+
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot26" draggable="true" style="grid-column-end: span 9; grid-row-end: span 8;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Utmattning</h2>
+                </summary>
+                <mmr-state-counter max="40" style="display: grid; grid-template-columns: repeat(10, 1fr);" tabindex="0"
+                    value="">
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                            </rect>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                            </rect>
+                            <line x1="1" y1="15" x2="15" y2="1" stroke="black" stroke-width="1"></line>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" fill="black" stroke="black" stroke-width="1">
+                            </rect>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+                <details>
+                    <summary>
+                        <p>Regler</p>
+                    </summary>
+                    <p>Utmattning: Kryss</p>
+                    <p>Grundutmattning: Ifyllt</p>
+                </details>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot27" draggable="true" style="grid-column-end: span 15; grid-row-end: span 19;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Skador</h2>
+                </summary>
+                <div>
+                    <label>Smärta</label>
+                    <div>
+                        <mmr-state-counter max="4" tabindex="0" value="">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1">
+                                    </rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </div>
+                </div>
+                <p>-1T6 per kryss för fysiska handlingar</p>
+                <div>
+                    <label>Blödning</label>
+                    <div style="display: flex; align-items: center">
+                        <mmr-state-counter max="3" tabindex="0" value="">
+                            <template>
+                                <svg width="19" height="25">
+                                    <path stroke="black" stroke-width="1" fill="transparent"
+                                        d="M 8.520887,24.293613 C 6.3602303,24.037319 4.4872052,23.156576 2.9717736,21.684283 1.2470434,20.00865 0.37482837,17.790146 0.5754502,15.589167 0.68763754,14.358384 1.0115522,13.208955 1.5686665,12.064687 2.1092118,10.954449 2.6986508,10.066696 3.8513754,8.6267021 4.2041859,8.185968 4.9222339,7.2890243 5.4470379,6.6334937 7.0150331,4.6749174 7.7526809,3.5982088 8.8706697,1.6361873 9.1901097,1.075584 9.4631017,0.61627518 9.477319,0.61550104 9.4915362,0.6147271 9.7228536,0.95707953 9.9913577,1.3762847 c 1.2688673,1.9810348 1.9899933,3.0079266 3.9206503,5.5830534 2.672748,3.5649349 3.431079,4.7621659 4.068778,6.4236729 0.933877,2.433193 0.654782,4.911109 -0.798788,7.091965 -1.292698,1.939493 -3.378555,3.253524 -5.895213,3.713819 -0.664869,0.121604 -2.1499351,0.177883 -2.765898,0.104818 z">
+                                    </path>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="19" height="25">
+                                    <path stroke="black" stroke-width="1" fill="red"
+                                        d="M 8.520887,24.293613 C 6.3602303,24.037319 4.4872052,23.156576 2.9717736,21.684283 1.2470434,20.00865 0.37482837,17.790146 0.5754502,15.589167 0.68763754,14.358384 1.0115522,13.208955 1.5686665,12.064687 2.1092118,10.954449 2.6986508,10.066696 3.8513754,8.6267021 4.2041859,8.185968 4.9222339,7.2890243 5.4470379,6.6334937 7.0150331,4.6749174 7.7526809,3.5982088 8.8706697,1.6361873 9.1901097,1.075584 9.4631017,0.61627518 9.477319,0.61550104 9.4915362,0.6147271 9.7228536,0.95707953 9.9913577,1.3762847 c 1.2688673,1.9810348 1.9899933,3.0079266 3.9206503,5.5830534 2.672748,3.5649349 3.431079,4.7621659 4.068778,6.4236729 0.933877,2.433193 0.654782,4.911109 -0.798788,7.091965 -1.292698,1.939493 -3.378555,3.253524 -5.895213,3.713819 -0.664869,0.121604 -2.1499351,0.177883 -2.765898,0.104818 z">
+                                    </path>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                        /<input type="number">
+                    </div>
+                </div>
+
+                <p>Varje runda i slutfasen:</p>
+                <p>Utmattningen ökdar med blödningstaken</p>
+                <div>
+                    <label>Antänd</label>
+                    <div><input type="number">/<input type="number"></div>
+                </div>
+                <p>Varje runda i slutfasen:</p>
+                <p>Utmattningen ökdar med Hettan</p>
+                <div>
+                    <label>Infektion</label>
+                    <div><input type="number">/<input type="number"></div>
+                </div>
+                <p>Varje dygn:</p>
+                <p>Dödsslag mot svårigheten</p>
+                <p>Nivån medför grundutmattning</p>
+                <div>
+                    <label>Inre skada</label>
+                    <div><mmr-state-counter max="3" tabindex="0" value="">
+                            <template>
+                                <svg width="24" height="24">
+                                    <rect x="4" y="4" width="14" height="14" fill="transparent" stroke="black"
+                                        stroke-width="1" transform-origin="center" transform="rotate(45)"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="24" height="24">
+                                    <rect x="4" y="4" width="14" height="14" fill="red" stroke="black" stroke-width="1"
+                                        transform-origin="center" transform="rotate(45)"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter></div>
+                </div>
+                <p>Varje dygn:</p>
+                <p>Slå 1T10 per Inre skada på tabellen för Inre skador</p>
+            </details>
+        </mmr-resize-handle>
+
+        <mmr-resize-handle slot="slot28" draggable="true" style="grid-column-end: span 11; grid-row-end: span 14;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Sår</h2>
+                </summary>
+                <div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><label>Huvud</label></td>
+                                <td>
+                                    <div>
+                                        <mmr-state-counter max="3" tabindex="0" value="">
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        fill="transparent" stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                        </mmr-state-counter>
+                                    </div>
+                                </td>
+                                <td>Chockslag</td>
+                            </tr>
+                            <tr>
+                                <td><label>Torso</label></td>
+                                <td>
+                                    <div>
+                                        <mmr-state-counter max="3" tabindex="0" value="">
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        fill="transparent" stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                        </mmr-state-counter>
+                                    </div>
+                                </td>
+                                <td>Dödsslag</td>
+                            </tr>
+                            <tr>
+                                <td><label>V. arm</label></td>
+                                <td>
+                                    <div>
+                                        <mmr-state-counter max="3" tabindex="0" value="">
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        fill="transparent" stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                        </mmr-state-counter>
+                                    </div>
+                                </td>
+                                <td>Stridsfärdighet</td>
+                            </tr>
+                            <tr>
+                                <td><label>H. arm</label></td>
+                                <td>
+                                    <div>
+                                        <mmr-state-counter max="3" tabindex="0" value="">
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        fill="transparent" stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                        </mmr-state-counter>
+                                    </div>
+                                </td>
+                                <td>Stirdsfärdighet</td>
+                            </tr>
+                            <tr>
+                                <td><label>V. ben</label></td>
+                                <td>
+                                    <div>
+                                        <mmr-state-counter max="3" tabindex="0" value="">
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        fill="transparent" stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                        </mmr-state-counter>
+                                    </div>
+                                </td>
+                                <td>Förflyttning</td>
+                            </tr>
+                            <tr>
+                                <td><label>H. ben</label></td>
+                                <td>
+                                    <div>
+                                        <mmr-state-counter max="3" tabindex="0" value="">
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        fill="transparent" stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                            <template>
+                                                <svg width="16" height="16">
+                                                    <rect x="1" y="1" width="14" height="14" stroke="black"
+                                                        stroke-width="1"></rect>
+                                                </svg>
+                                            </template>
+                                        </mmr-state-counter>
+                                    </div>
+                                </td>
+                                <td>Förflyttning</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <label>Övriga skador</label>
+                <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot29" draggable="true" style="grid-column-end: span 17; grid-row-end: span 7;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Stridsvärden</h2>
+                </summary>
+                <div>
+                    <label>Grundrustning</label>
+                    <div><input type="number"></div>
+                </div>
+                <div>
+                    <label>Grunskada</label>
+                    <div><input type="number">T6+<input type="number"></div>
+                </div>
+                <div>
+                    <label>Läkningstakt</label>
+                    <div><input type="number"></div>
+                </div>
+                <p>Läkningstakt påverkar läkning av benbrott, smärta och sår</p>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot30" draggable="true" style="grid-column-end: span 18; grid-row-end: span 9;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Magi</h2>
+                </summary>
+                <div>
+                    <label>Max antal vävar</label>
+                    <div><input type="number"></div>
+                </div>
+                <div>
+                    <label>Borttoning</label>
+                    <div><input type="number"></div>
+                </div>
+                <div>
+                    <label>Måttlig fältstörning</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Allvarlig fältstörning</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Kritisk fältstörning</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot31" draggable="true" style="grid-column-end: span 15; grid-row-end: span 7;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Åkallan</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Religion</th>
+                                <th>Avvisning/<br>Välsignelse</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td><input type="number"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot32" draggable="true" style="grid-column-end: span 17; grid-row-end: span 17;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Mentalt</h2>
+                </summary>
+                <div>
+                    <label>Frånvarande</label>
+                    <div><input type="checkbox"></div>
+                </div>
+                <p>-2T6 Reaktion, Vaksamhet, Genomsöka, Speja och Spåra</p>
+                <div>
+                    <label>Förnekelse</label>
+                    <div><input type="checkbox"></div>
+                </div>
+                <p>-1 fokus per scen vid konfrontation</p>
+                <div>
+                    <label>Katatonisk</label>
+                    <div><input type="checkbox"></div>
+                </div>
+                <p>Kan ej agera</p>
+                <div>
+                    <label>Orkeslös</label>
+                    <div><input type="checkbox"></div>
+                </div>
+                <p>Inga Fokus från Nivå I för samtliga karaktärsdrag</p>
+                <div>
+                    <label>Svårkontaktbar</label>
+                    <div><input type="checkbox"></div>
+                </div>
+                <p>-2T6 på Sociala färdigheter</p>
+                <label>Störningar</label>
+                <textarea>        </textarea>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot33" draggable="true" style="grid-column-end: span 14; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Långvariga vävar &amp; mirakel</h2>
+                </summary>
+                <mmr-block>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                </mmr-block>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot34" draggable="true" style="grid-column-end: span 20; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Mysterier</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Namn</th>
+                                <th>Beskrivning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input></td>
+                                <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot35" draggable="true" style="grid-column-end: span 22; grid-row-end: span 9;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Utrustning</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Beskrivning</th>
+                                <th>Vikt</th>
+                                <th>Plats</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                                <td><input type="number"></td>
+                                <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                                <td><input type="number"></td>
+                                <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                                <td><input type="number"></td>
+                                <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot36" draggable="true" style="grid-column-end: span 20; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Viktiga datum</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Datum</th>
+                                <th>Händelse</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                                <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot37" draggable="true" style="grid-column-end: span 15; grid-row-end: span 7;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Pengar</h2>
+                </summary>
+                <mmr-table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Förvaring</th>
+                                <th>Värde i silver</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr draggable="true">
+                                <td><input value="Silver i börs"></td>
+                                <td><input type="number"></td>
+                            </tr>
+                            <tr draggable="true">
+                                <td><input value="Silver i förvar"></td>
+                                <td><input type="number"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mmr-table>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot38" draggable="true" style="grid-column-end: span 16; grid-row-end: span 8;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Levnadsstandard</h2>
+                </summary>
+                <div>
+                    <label>Bostad</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Levnadskostnad</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Överskott</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Maximaltlån</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot39" draggable="true" style="grid-column-end: span 10; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Anteckningar</h2>
+                </summary>
+                <mmr-block>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                </mmr-block>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot40" draggable="true" style="grid-column-end: span 10; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Tillfälliga kontaker</h2>
+                </summary>
+                <mmr-block>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                </mmr-block>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot41" draggable="true" style="grid-column-end: span 10; grid-row-end: span 6;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Bakgrund</h2>
+                </summary>
+                <mmr-block>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                    <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+                </mmr-block>
+            </details>
+        </mmr-resize-handle>
+        <mmr-resize-handle slot="slot42" draggable="true" style="grid-column-end: span 15; grid-row-end: span 10;">
+            <details open="" class="section">
+                <summary>
+                    <h2>Släkt</h2>
+                </summary>
+                <div>
+                    <label>Släktnamn</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Moder</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Fader</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Syskon</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Egen familj</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+                <div>
+                    <label>Om familjen</label>
+                    <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                </div>
+            </details>
+        </mmr-resize-handle>
+    </mmr-dynamic-grid>
+</body>
+
+</html>
