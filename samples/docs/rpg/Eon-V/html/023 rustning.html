@@ -1,0 +1,178 @@
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Rustning</h2>
+        </summary>
+        <mmr-table>
+            <table id="rustning">
+                <thead>
+                    <tr>
+                        <th contenteditable>Rustningsdel</th>
+                        <th contenteditable>Hugg</th>
+                        <th contenteditable>Kross</th>
+                        <th contenteditable>Stick</th>
+                        <th contenteditable>Belastning</th>
+                        <th contenteditable>Egenskaper</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">1 Huvud</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />                                
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">2-4 Torso</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">5-6 V. arm</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">7-8 H. arm</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">9 V. ben</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">10 H. ben</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="number" 
+                            id="total-belastning"
+                            data-formula-value="@DOM('#rustning tbody td:first-of-type:has(input:checked) ~ td:nth-of-type(5) > input').select(value) $ this.sum()" />
+                    </td>
+                    <td></td>
+                </tfoot>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>

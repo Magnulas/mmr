@@ -1,0 +1,227 @@
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Skador</h2>
+        </summary>
+        <details>
+            <summary contenteditable>
+                Smärta
+                <mmr-state-counter max="4">
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                            </rect>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+            </summary>
+            <p contenteditable>-1T6 per kryss för fysiska handlingar</p>
+        </details>
+        <details>
+            <summary contenteditable>
+                Blödning
+                <span style="display: flex; align-items: center">
+                    <mmr-state-counter max="3">
+                        <template>
+                            <svg width="19" height="25">
+                                <path stroke="black" stroke-width="1" fill="transparent"
+                                    d="M 8.520887,24.293613 C 6.3602303,24.037319 4.4872052,23.156576 2.9717736,21.684283 1.2470434,20.00865 0.37482837,17.790146 0.5754502,15.589167 0.68763754,14.358384 1.0115522,13.208955 1.5686665,12.064687 2.1092118,10.954449 2.6986508,10.066696 3.8513754,8.6267021 4.2041859,8.185968 4.9222339,7.2890243 5.4470379,6.6334937 7.0150331,4.6749174 7.7526809,3.5982088 8.8706697,1.6361873 9.1901097,1.075584 9.4631017,0.61627518 9.477319,0.61550104 9.4915362,0.6147271 9.7228536,0.95707953 9.9913577,1.3762847 c 1.2688673,1.9810348 1.9899933,3.0079266 3.9206503,5.5830534 2.672748,3.5649349 3.431079,4.7621659 4.068778,6.4236729 0.933877,2.433193 0.654782,4.911109 -0.798788,7.091965 -1.292698,1.939493 -3.378555,3.253524 -5.895213,3.713819 -0.664869,0.121604 -2.1499351,0.177883 -2.765898,0.104818 z" />
+                            </svg>
+                        </template>
+                        <template>
+                            <svg width="19" height="25">
+                                <path stroke="black" stroke-width="1" fill="red"
+                                    d="M 8.520887,24.293613 C 6.3602303,24.037319 4.4872052,23.156576 2.9717736,21.684283 1.2470434,20.00865 0.37482837,17.790146 0.5754502,15.589167 0.68763754,14.358384 1.0115522,13.208955 1.5686665,12.064687 2.1092118,10.954449 2.6986508,10.066696 3.8513754,8.6267021 4.2041859,8.185968 4.9222339,7.2890243 5.4470379,6.6334937 7.0150331,4.6749174 7.7526809,3.5982088 8.8706697,1.6361873 9.1901097,1.075584 9.4631017,0.61627518 9.477319,0.61550104 9.4915362,0.6147271 9.7228536,0.95707953 9.9913577,1.3762847 c 1.2688673,1.9810348 1.9899933,3.0079266 3.9206503,5.5830534 2.672748,3.5649349 3.431079,4.7621659 4.068778,6.4236729 0.933877,2.433193 0.654782,4.911109 -0.798788,7.091965 -1.292698,1.939493 -3.378555,3.253524 -5.895213,3.713819 -0.664869,0.121604 -2.1499351,0.177883 -2.765898,0.104818 z" />
+                            </svg>
+                        </template>
+                    </mmr-state-counter>
+                    /<input type="number" />
+                </span>
+            </summary>
+            <p contenteditable>Varje runda i slutfasen:</p>
+            <p contenteditable>Utmattningen ökdar med blödningstaken</p>
+        </details>
+        <details>
+            <summary contenteditable>
+                Antänd
+                <div><input type="number" style="text-align: right;" />/<input type="number" /></div>
+            </summary>
+            <p contenteditable>Varje runda i slutfasen:</p>
+            <p contenteditable>Utmattningen ökdar med Hettan</p>
+        </details>
+        <details>
+            <summary contenteditable>
+                Infektion
+                <div><input type="number" style="text-align: right;" />/<input type="number" /></div>
+            </summary>
+            <p contenteditable>Varje dygn:</p>
+            <p contenteditable>Dödsslag mot svårigheten</p>
+            <p contenteditable>Nivån medför grundutmattning</p>
+        </details>
+        <details>
+            <summary contenteditable>Inre skada
+                <mmr-state-counter max="3">
+                    <template>
+                        <svg width="24" height="24">
+                            <rect x="4" y="4" width="14" height="14" fill="transparent" stroke="black" stroke-width="1"
+                                transform-origin="center" transform="rotate(45)"></rect>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="24" height="24">
+                            <rect x="4" y="4" width="14" height="14" fill="red" stroke="black" stroke-width="1"
+                                transform-origin="center" transform="rotate(45)"></rect>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+            </summary>
+            <p contenteditable>Varje dygn:</p>
+            <p contenteditable>Slå 1T10 per Inre skada på tabellen för Inre skador</p>
+        </details>
+    </details>
+</mmr-resize-handle>
+
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Sår</h2>
+        </summary>
+        <div>
+            <table>
+                <tr>
+                    <td contenteditable>Huvud</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Chockslag</td>
+                </tr>
+                <tr>
+                    <td contenteditable>Torso</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Dödsslag</td>
+                </tr>
+                <tr>
+                    <td contenteditable>V. arm</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Stridsfärdighet</td>
+                </tr>
+                <tr>
+                    <td contenteditable>H. arm</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Stridsfärdighet</td>
+                </tr>
+                <tr>
+                    <td contenteditable>V. ben</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Förflyttning</td>
+                </tr>
+                <tr>
+                    <td contenteditable>H. ben</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Förflyttning</td>
+                </tr>
+            </table>
+        </div>
+        <label contenteditable>Övriga skador</label>
+        <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+    </details>
+</mmr-resize-handle>

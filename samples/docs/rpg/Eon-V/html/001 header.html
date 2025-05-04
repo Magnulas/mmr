@@ -1,0 +1,37 @@
+<mmr-resize-handle class="character-sheet-header">
+    <mmr-svg-painter snapx="20" snapy="20" snaprotate="10">
+        <svg>
+            <defs>
+                <radialGradient id="fadeGradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="white"></stop>
+                    <stop stop-color="white" offset="80%"></stop>
+                    <stop offset="90%" stop-color="white" stop-opacity="0"></stop>
+                </radialGradient>
+                <mask id="fadeMask">
+                    <rect width="352" height="352" fill="url(#fadeGradient)"></rect>
+                </mask>
+                <mask id="59dd34bb-5287-4dc6-93f9-5a334b1b2f1d">
+                    <circle cx="124" cy="124" r="124" fill="white">
+                    </circle>
+                </mask>
+            </defs>
+            <foreignObject width="248" height="248" x="0" y="0" transform="matrix(1, 0, 0, 1, 28, 60)"
+                mask="url(#59dd34bb-5287-4dc6-93f9-5a334b1b2f1d)">
+                <mmr-embed style="width: 248px; height: 248px" xlmns="http://www.w3.org/1999/xhtml">
+                </mmr-embed>
+            </foreignObject>
+            <image width="352" height="352"  transform="matrix(1, 0, 0, 1, -20, 12)" style="pointer-events: none;" mask="url(#fadeMask)"
+                href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/frame.png">
+            </image>
+            <image transform="matrix(1, 0, 0, 1, 40, 0)"
+                href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/helmgast/title.png">
+            </image>
+            <foreignObject x="0" y="340" height="60" width="312">
+                <div xlmns="http://www.w3.org/1999/xhtml" draggable="true">
+                    <input id="name">
+                    <label contenteditable>Namn</label>
+                </div>
+            </foreignObject>
+        </svg>
+    </mmr-svg-painter>
+</mmr-resize-handle>

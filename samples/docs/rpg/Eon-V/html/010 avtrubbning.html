@@ -1,0 +1,56 @@
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Avtrubbning</h2>
+        </summary>
+        <div style="display: grid; grid-template-columns: auto repeat(auto, 1fr);text-align: center">
+            <label contenteditable>Utsatthet</label>
+            <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                        </rect>
+                    </svg>
+                </template>
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                    </svg>
+                </template>
+            </mmr-state-counter>
+            <label contenteditable>Våld</label>
+            <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                        </rect>
+                    </svg>
+                </template>
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                    </svg>
+                </template>
+            </mmr-state-counter>
+            <label contenteditable>Övernaturligt</label>
+            <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                        </rect>
+                    </svg>
+                </template>
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                    </svg>
+                </template>
+            </mmr-state-counter>
+            <span></span>
+            <span>+5</span>
+            <span>+10</span>
+            <span>+15</span>
+            <span>+20</span>
+            <span>+25</span>
+    </details>
+</mmr-resize-handle>

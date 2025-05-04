@@ -1,0 +1,303 @@
+/*Layout*/
+#character-sheet::part(first cell) {
+    margin: auto;
+}
+
+.character-sheet-header {
+    width: 312px;
+    height: 406px;
+}
+
+td:has(.ob-dice)+td:last-child>input:only-child {
+    width: 2ch;
+}
+
+.ob-dice {
+    text-wrap: nowrap;
+    font-family: GoudyDaval;
+    font-size: 12pt;
+}
+
+.ob-dice > input:first-of-type {
+    text-align: right
+}
+
+.ob-dice > input:last-of-type {
+    text-align: left
+}
+
+.ob-dice>input[type="number"] {
+    min-width: 1ch;
+    width: 4ch;
+}
+
+input[type="number"]{
+    text-align: center;
+}
+
+input[type="number"] {
+    min-width: 1ch;
+    width: 4ch;
+}
+/*Images*/
+body {
+    background-image: url('../images/background.jpg');
+}
+
+/*Fonts*/
+@font-face {
+    font-family: GoudyDaval;
+    src: url("https://magnulas.github.io/mmr/samples/assets/fonts/sorts-mill-goudy-master/OFLGoudyStM.otf") format("opentype");
+}
+
+@font-face {
+    font-family: PirataOne;
+    src: url("https://magnulas.github.io/mmr/samples/assets/fonts/pirata-one/PirataOne-Regular.ttf") format("truetype");
+}
+
+body {
+    margin: 0px;
+}
+
+body {
+    font-family: PirataOne;
+}
+
+h2 {
+    font-weight: normal;
+    font-family: PirataOne;
+}
+
+/*Font apperance*/
+label,
+summary,
+th,
+td,
+textarea,
+div[contenteditable],
+input,
+p {
+    font-family: GoudyDaval;
+    font-size: 12pt;
+
+}
+
+p {
+    font-style: italic;
+    margin: 0px;
+    font-size: 10pt;
+}
+
+label,
+th {
+    font-weight: bold;
+}
+
+label {
+    text-align: left;
+}
+
+td label {
+    font-weight: normal;
+}
+
+/*Input*/
+textarea,
+div[contenteditable],
+input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    height: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+
+textarea,
+div[contenteditable] {
+    display: block;
+    width: 100%;
+}
+
+/*Tables*/
+tbody.avstand tr td:nth-of-type(3) {
+    width: 100px;
+}
+
+tbody.avstand tr td:nth-of-type(4) {
+    width: 60px;
+}
+
+summary input[type="checkbox"] {
+    margin-left: auto
+}
+
+summary>*:last-child {
+    margin-left: auto
+}
+
+summary {
+    font-weight: bold;
+}
+
+/*Font layout*/
+table {
+    width: 100%;
+}
+
+table {
+    text-align: center;
+}
+
+tbody>tr>th:first-child {
+    text-align: left;
+}
+
+tbody>tr>th:last-child {
+    text-align: right;
+}
+
+td {
+    text-wrap: nowrap;
+}
+
+td {
+    vertical-align: top;
+}
+
+/*Imgage layout*/
+img,
+mmr-embed {
+    min-width: 64px;
+    min-height: 64px;
+    background-position: center;
+    background-size: auto;
+}
+
+mmr-embed {
+    border: 1px solid lightgrey
+}
+
+div:has(>img:only-child),
+div:has(>mmr-embed:only-child) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div:has(>mmr-embed:only-child) {
+    overflow: hidden;
+}
+
+div>mmr-embed:only-child {
+    height: inherit;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+div>img:only-child {
+    width: initial;
+    height: initial;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/*Overflow*/
+details.section> :not(summary) {
+    overflow: auto;
+}
+
+mmr-resize-handle:has(>textarea:only-child) {
+    height: 24px;
+}
+
+div[contenteditable] {
+    resize: vertical;
+    overflow: auto;
+}
+
+/*NOTE: This does not work in Firefox. We can work around it by nesting an element and resizing it, but then that element would have to apply its widht to the th element otherwise resizing columns wont work*/
+thead th:not(:only-of-type):not(:empty) {
+    resize: horizontal;
+    overflow: hidden;
+}
+
+/*Details*/
+details {
+    text-align: left;
+}
+
+summary>h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 4px;
+}
+
+details.section>div:not(:only-of-type) {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 4px;
+}
+
+summary {
+    display: flex;
+    gap: 4px;
+}
+
+details.rules>summary {
+    width: min-content;
+    border-bottom: 1px solid black;
+}
+
+details.section>summary>*:first-child,
+details.rules>summary>*:first-child {
+    border-bottom: 1px solid black;
+}
+
+details.rules>summary {
+    font-weight: normal;
+    font-style: italic;
+}
+
+summary>*:not(input):first-child>* {
+    pointer-events: all;
+}
+
+/*
+summary:has(>input)::before {
+    display: inline-block;
+    margin-right: 8px;
+    color: black;
+}*/
+
+details:not(.section):not(.rules):not([open])>summary::before {
+    content: '▷';
+}
+
+details:not(.section):not(.rules)[open]>summary::before {
+    content: '▽';
+}
+
+#name {
+    width: 100%;
+    flex-grow: initial
+}
+
+div:has(> #name) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+div:has(> #name)>* {
+    margin: 0px;
+    font-size: 14pt;
+    text-align: center
+}
+
+td:first-of-type:has(+ td >.ob-dice){
+    text-align: left;
+}
