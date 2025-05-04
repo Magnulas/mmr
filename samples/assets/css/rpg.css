@@ -1,0 +1,88 @@
+.flex-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-form>* {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+}
+
+.flex-form.grow>*>*:last-child {
+    flex-grow: 1;
+}
+
+.flex-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-grid>* {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-grid>*>* {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-grid>*>*>input:not([type]),
+.flex-grid>*>*>input[type="text"] {
+    width: 40px;
+}
+
+input:not(:hover)::-webkit-outer-spin-button,
+input:not(:hover)::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]:not(:hover) {
+    -moz-appearance: textfield;
+}
+
+td>div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+input,
+textarea,
+*[contenteditable] {
+    min-width: 1ch;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+td:has(input[type="number"]) {
+    text-align: center;
+}
+
+td>input:not([type]):only-child,
+td>input[type="text"]:only-child {
+    width: 100%;
+}
+
+input:not([type]),
+input[type="text"] {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+td:first-of-type:has(label) {
+    text-align: left;
+}

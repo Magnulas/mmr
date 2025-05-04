@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <title data-formula-text="@DOM('#name').select(value) $ this[0]"></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.7/samples/assets/css/mmr.default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.7/samples/assets/css/rpg.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.7/samples/docs/rpg/Eon-V/assets/css/eon.css">
+    <script                 src="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.7/lib/mmr.bundle.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.myHooks.saveWebPageOnExitHook()
+        window.myHooks.loadWebPageOnLoadHook()
+        window.myHooks.saveWebPageHook()
+        window.addEventListener("load", function () { window.myHooks.monitorDataFormulas(document) }, { once: true })
+    </script>
+</head>
+<body>
+    <mmr-dynamic-grid id="character-sheet">
+        <mmr-resize-handle class="character-sheet-header">
+    <mmr-svg-painter snapx="20" snapy="20" snaprotate="10">
+        <svg>
+            <defs>
+                <radialGradient id="fadeGradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="white"></stop>
+                    <stop stop-color="white" offset="80%"></stop>
+                    <stop offset="90%" stop-color="white" stop-opacity="0"></stop>
+                </radialGradient>
+                <mask id="fadeMask">
+                    <rect width="352" height="352" fill="url(#fadeGradient)"></rect>
+                </mask>
+                <mask id="59dd34bb-5287-4dc6-93f9-5a334b1b2f1d">
+                    <circle cx="124" cy="124" r="124" fill="white">
+                    </circle>
+                </mask>
+            </defs>
+            <foreignObject width="248" height="248" x="0" y="0" transform="matrix(1, 0, 0, 1, 28, 60)"
+                mask="url(#59dd34bb-5287-4dc6-93f9-5a334b1b2f1d)">
+                <mmr-embed style="width: 248px; height: 248px" xlmns="http://www.w3.org/1999/xhtml">
+                </mmr-embed>
+            </foreignObject>
+            <image width="352" height="352"  transform="matrix(1, 0, 0, 1, -20, 12)" style="pointer-events: none;" mask="url(#fadeMask)"
+                href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/frame.png">
+            </image>
+            <image transform="matrix(1, 0, 0, 1, 40, 0)"
+                href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/helmgast/title.png">
+            </image>
+            <foreignObject x="0" y="340" height="60" width="312">
+                <div xlmns="http://www.w3.org/1999/xhtml" draggable="true">
+                    <input id="name">
+                    <label contenteditable>Namn</label>
+                </div>
+            </foreignObject>
+        </svg>
+    </mmr-svg-painter>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Rollpersonen</h2>
+        </summary>
+        <div class="flex-form grow">
+            <div><label contenteditable>Folkslag</label><input /></div>
+            <div><label contenteditable>Kön</label><input /></div>
+            <div><label contenteditable>Ålder</label><input /></div>
+            <div><label contenteditable>Religion</label><input /></div>
+            <div><label contenteditable>Värv</label><input /></div>
+            <div><label contenteditable>Hemland</label><input /></div>
+            <div><label contenteditable>Hemort</label><input /></div>
+            <div><label contenteditable>Levnadsstandard</label><input /></div>
+            <div><label contenteditable>Längd</label><input /></div>
+            <div><label contenteditable>Vikt</label><input /></div>
+            <div><label contenteditable>Vapenarm</label><input /></div>
+        </div>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Relationer & andra rollpersoner</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <thead>
+                    <tr>
+                        <th contenteditable>Namn</th>
+                        <th contenteditable>Anteckningar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <details>
+                                <summary><input></summary>
+                                <mmr-embed></mmr-embed>
+                            </details>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Utseende och särdrag</h2>
+        </summary>
+        <mmr-block>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+        </mmr-block>
+    </details>
+</mmr-resize-handle>ze-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Djur och följeslagare</h2>
+        </summary>
+        <mmr-block>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+        </mmr-block>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+    <summary>
+        <h2 contenteditable>Kretsar</h2>
+    </summary>
+    <mmr-block>
+        <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+        <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+    </mmr-block>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Karktärsdrag</h2>
+        </summary>
+        <mmr-block class="flex-grid">
+                <div>
+                    <div></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Namn</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Nivå I</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Nivå II</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Nivå III</label></div>
+                    <div></div>
+                </div>
+                <div>
+                    <div><label contenteditable>Primärt</label></div>
+                    <div><input /></label></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div>
+                        <label contenteditable>Låst</label><input type="checkbox" />
+                        <label contenteditable>Svaghet</label><input type="checkbox" />
+                        <label contenteditable>Tvivel</label><input type="checkbox" />
+                        <label contenteditable>Störning</label><input type="checkbox" />
+                    </div>
+                </div>
+                <div draggable="true">
+                    <div><label contenteditable>Sekundärt</label></div>
+                    <div><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div>
+                        <label contenteditable>Låst</label><input type="checkbox" />
+                        <label contenteditable>Svaghet</label><input type="checkbox" />
+                        <label contenteditable>Tvivel</label><input type="checkbox" />
+                        <label contenteditable>Störning</label><input type="checkbox" />
+                    </div>
+                </div>
+        </mmr-block>
+        <details class="rules">
+            <summary>Regler</summary>
+            <p contenteditable>Nivå I ger 1 Fokus (0 om Svaghet eller Tvivel).</p>
+            <p contenteditable>Nivå II ger antingen 3 Fokus (2 om Svaghet), 1 Välmående (ej om Svaghet) eller en Omvälvande
+                händelse. Ger inget om Tvivel.</p>
+            <p contenteditable>Nivå III ger 2 Välmående, återhämtar all Fokus samt ger en Livsavgörande händelse.</p>
+            <p contenteditable>En Omvälvande händelse läker antingen en Efterverkning, låser upp ett Karaktärsdrag eller tar bort en
+                Svaghet från ett Karaktärsdrag.</p>
+            <p contenteditable>En Livsavgörande händelse läker en Störning och samtliga Efterverkningar, eller tar bort låsningar
+                och svagheter från samtliga Karaktärsdrag</p>
+        </details>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Attribut</h2>
+        </summary>
+        <div class="flex-form">
+            <div>
+                <label contenteditable>Förflyttning</label>
+                <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
+            </div>
+            <div>
+                <label contenteditable>Intryck</label>
+                <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
+            </div>
+            <div>
+                <label contenteditable>Kroppsbyggnad</label>
+                <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
+            </div>
+            <div>
+                <label contenteditable>Livskraft</label>
+                <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
+            </div>
+            <div>
+                <label contenteditable>Reaktion</label>
+                <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
+            </div>
+            <div>
+                <label contenteditable>Självkontroll</label>
+                <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
+            </div>
+            <div>
+                <label contenteditable>Vaksamhet</label>
+                <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
+            </div>
+            <div>
+                <label contenteditable>Visdom</label>
+                <input type="number" />
+            </div>
+        </div>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Fokus & välmående</h2>
+        </summary>
+        <mmr-state-counter max="10" columns="5">
+            <template>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="11" stroke="black" fill="transparent" stroke-width="1"></circle>
+                </svg>
+            </template>
+            <template>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1"></circle>
+                    <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                </svg>
+            </template>
+            <template>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1"></circle>
+                    <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                    <line x1="19" y2="19" x2="5" y1="5" stroke="black" stroke-width="2"></line>
+                </svg>
+            </template>
+        </mmr-state-counter>
+        <details class="rules">
+            <summary>Regler</summary>
+            <div>
+                <p contenteditable>+1T6: 1 Fokus</p>
+                <p contenteditable>+2T6: 3 Fokus</p>
+                <p contenteditable>+3T6: 6 Fokus</p>
+                <p contenteditable>+4T6: 10 Fokus</p>
+            </div>
+            <p contenteditable>Använt Fokus: Snedstreck</p>
+            <p contenteditable>Minskat Välmående: Kryss</p>
+            <p contenteditable>Minskat maximalt Välmående: Ifyllt</p>
+        </details>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Avtrubbning</h2>
+        </summary>
+        <div style="display: grid; grid-template-columns: auto repeat(auto, 1fr);text-align: center">
+            <label contenteditable>Utsatthet</label>
+            <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                        </rect>
+                    </svg>
+                </template>
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                    </svg>
+                </template>
+            </mmr-state-counter>
+            <label contenteditable>Våld</label>
+            <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                        </rect>
+                    </svg>
+                </template>
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                    </svg>
+                </template>
+            </mmr-state-counter>
+            <label contenteditable>Övernaturligt</label>
+            <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                        </rect>
+                    </svg>
+                </template>
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                    </svg>
+                </template>
+            </mmr-state-counter>
+            <span></span>
+            <span>+5</span>
+            <span>+10</span>
+            <span>+15</span>
+            <span>+20</span>
+            <span>+25</span>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Språk</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <thead>
+                    <tr>
+                        <th contenteditable>Talspråk</th>
+                        <th contenteditable>Skriftspråk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input></input></td>
+                        <td><input></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Sociala färdigheter</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td contenteditable>Argumentera</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Berättarkonst</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Charm</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Dupera</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Genomskåda</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Handel</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Hovliv</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Injaga fruktan</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Ledarskap</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Skumraskaffärer</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Spel & dobbel</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Sång & musik</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Kunskapsfärdigheter</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td contenteditable>Filosofi</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Geografi</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Gifter & droger</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Historia</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Kalkylera</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Krigsföring</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Kulturkännedom</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Lagkunskap</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Läkekonst</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Ockultism</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Teologi</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Teoretisk magi</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Undervisa</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Vildmarksfärdigheter</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td contenteditable>Genomsöka</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Jakt & fiske</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Naturlära</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Orientera</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Rida</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Sjömannaskap</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Speja</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Spåra</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Vildmarksvana</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Rörelsefärdigheter</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td contenteditable>Dansa</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Fingerfärdighet</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Gömma</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Hoppa</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Klättra</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Marsch</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Simma</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Smyga</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Undvika</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Övriga färdigheter</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><input /></td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td><input /></td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td><input /></td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Stridsfärdigheter</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td contenteditable>Slagsmål</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td><input /></td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Mystikfärdigheter</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td contenteditable>Cermoni</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Förnimma</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Förvränga</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Harmonisera</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td contenteditable>Kanalisera</td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                    <tr>
+                        <td><input /></td>
+                        <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
+                        <td><input></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Erfarenhet</h2>
+        </summary>
+        <div>
+            <label contenteditable>Oanvänd erfarnhet</label>
+            <input type="number" />
+        </div>
+        <div>
+            <details class="rules" style="width: min-content;">
+                <summary>Regler</summary>
+                <div>
+                    <h3 contenteditable>Ny kunskap</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th contenteditable>Visdom</th>
+                                <th contenteditable>Erfarenhetskostnad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td contenteditable>4-5</td>
+                                <td contenteditable>10</td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>6-7</td>
+                                <td contenteditable>8</td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>8-9</td>
+                                <td contenteditable>6</td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>10-11</td>
+                                <td contenteditable>5</td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>12-15</td>
+                                <td contenteditable>4</td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>16-19</td>
+                                <td contenteditable>3</td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>20+</td>
+                                <td contenteditable>2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 contenteditable>Attributt</h3>
+                    <p contenteditable>+1 i ett Attribut / 8 erfarenhet</p>
+                    <p contenteditable>Ett enskilt attribut kan maximalt höjas 4 gånger</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td contenteditable>Förflyttning</td>
+                                <td><input type="number" /></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>Intryck</td>
+                                <td><input type="number" /></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>Kroppsbyggnad</td>
+                                <td><input type="number" /></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>Livskraft</td>
+                                <td><input type="number" /></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>Reaktion</td>
+                                <td><input type="number" /></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>Självkontroll</td>
+                                <td><input type="number" /></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>Vaksamhet</td>
+                                <td><input type="number" /></td>
+                            </tr>
+                            <tr>
+                                <td contenteditable>Visdom</td>
+                                <td><input type="number" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h3 contenteditable>Färdigheter</h3>
+                    <table>
+                        <tr>
+                            <td contenteditable>+1 vid 2T6</td>
+                            <td contenteditable>1 erfarenhet</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable>+1 vid 3T6</td>
+                            <td contenteditable>2 erfarenhet</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable>+1 vid 4T6</td>
+                            <td contenteditable>4 erfarenhet</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable>+1 vid 5T6</td>
+                            <td contenteditable>8 erfarenhet</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable>+1 vid 6T6</td>
+                            <td contenteditable>16 erfarenhet</td>
+                        </tr>
+                        <tr>
+                            <td contenteditable>+1 vid (+1T6)</td>
+                            <td contenteditable>(x2)</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </details>
+        </div>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Särskilda egenskaper</h2>
+        </summary>
+        <mmr-block>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+        </mmr-block>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Regelanteckningar</h2>
+        </summary>
+        <mmr-block>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+        </mmr-block>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Belastning</h2>
+        </summary>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th contenteditable>Summa</th>
+                        <th contenteditable>Avdrag</th>
+                        <th contenteditable>Grundutm.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value) $ (v => v<9)(this[0])"></td>
+                        <td>0-8</td>
+                        <td>-</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => 9 <= v && v < 17)(this[0])"></td>
+                        <td>9-16</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => 17 <= v && v < 25)(this[0])"></td>
+                        <td>17-24</td>
+                        <td>-1T6</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => 25 <= v && v < 33)(this[0])"></td>
+                        <td>25-32</td>
+                        <td>-2T6</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => v>=33)(this[0])"></td>
+                        <td>33-40</td>
+                        <td>-2T6</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <details class="rules">
+            <summary>Regler</summary>
+            <p contenteditable>Avdrag gäller:</p>
+            <p contenteditable>Förflyttning, Reaktion & Rörelsefärdigheter</p>
+        </details>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Rustning</h2>
+        </summary>
+        <mmr-table>
+            <table id="rustning">
+                <thead>
+                    <tr>
+                        <th contenteditable>Rustningsdel</th>
+                        <th contenteditable>Hugg</th>
+                        <th contenteditable>Kross</th>
+                        <th contenteditable>Stick</th>
+                        <th contenteditable>Belastning</th>
+                        <th contenteditable>Egenskaper</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">1 Huvud</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />                                
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">2-4 Torso</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">5-6 V. arm</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">7-8 H. arm</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">9 V. ben</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">10 H. ben</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input type="number" 
+                            id="total-belastning"
+                            data-formula-value="@DOM('#rustning tbody td:first-of-type:has(input:checked) ~ td:nth-of-type(5) > input').select(value) $ this.sum()" />
+                    </td>
+                    <td></td>
+                </tfoot>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Skadeintervall</h2>
+        </summary>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th contenteditable>Skada</th>
+                        <th contenteditable>Utmattn.</th>
+                        <th contenteditable>Skadetabell</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1-4</td>
+                        <td>+1</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>5-9</td>
+                        <td>+2</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>10-14</td>
+                        <td>+4</td>
+                        <td>1T10</td>
+                    </tr>
+                    <tr>
+                        <td>15-19</td>
+                        <td>+6</td>
+                        <td>1T10+2</td>
+                    </tr>
+                    <tr>
+                        <td>20-24</td>
+                        <td>+8</td>
+                        <td>1T10+4</td>
+                    </tr>
+                    <tr>
+                        <td>25-29</td>
+                        <td>+10</td>
+                        <td>1T10+6</td>
+                    </tr>
+                    <tr>
+                        <td>30-34</td>
+                        <td>+12</td>
+                        <td>1T10+8</td>
+                    </tr>
+                    <tr>
+                        <td>35-39</td>
+                        <td>+14</td>
+                        <td>1T10+10</td>
+                    </tr>
+                    <tr>
+                        <td>40-44</td>
+                        <td>+16</td>
+                        <td>1T10+12</td>
+                    </tr>
+                    <tr>
+                        <td>(+5)</td>
+                        <td>(+2)</td>
+                        <td>(+2)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Beväpning</h2>
+        </summary>
+        <mmr-table>
+            <table style="text-align: left;">
+                <thead>
+                    <tr>
+                        <th contenteditable>Närstridsvapen</th>
+                        <th contenteditable>Färdighet</th>
+                        <th contenteditable>Hugg</th>
+                        <th contenteditable>Kross</th>
+                        <th contenteditable>Stick</th>
+                        <th contenteditable>Egenskaper</th>
+                    </tr>
+                </thead>
+                <tbody class="narstrid">
+                    <tr>
+                        <td contenteditable>Slagsmål</td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input></td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th contenteditable>Avståndsvapen</th>
+                        <th contenteditable>Färdighet</th>
+                        <th contenteditable>Räckvidd</th>
+                        <th contenteditable>Typ</th>
+                        <th contenteditable>Skada</th>
+                        <th contenteditable>Egenskaper</th>
+                    </tr>
+                </thead>
+                <tbody class="avstand">
+                    <tr>
+                        <td><input></td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <input></input>
+                        </td>
+                        <td>
+                            <input></input>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr>
+                        <th contenteditable>Försvar</th>
+                        <th contenteditable>Färdighet</th>
+                        <th contenteditable>Närstrid</th>
+                        <th contenteditable>Avstånd</th>
+                        <th contenteditable>Skydd</th>
+                        <th contenteditable>Egenskaper</th>
+                    </tr>
+                </thead>
+                <tbody class="forsvar">
+                    <tr>
+                        <td contenteditable>Undvika</td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <input type="number"></input></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea>Kontring kan ej väljas</textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input></td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
+                        </td>
+                        <td>
+                            <input type="number"></input></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Utmattning</h2>
+        </summary>
+        <mmr-state-counter max="40" columns="10">
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                    </rect>
+                </svg>
+            </template>
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                    </rect>
+                    <line x1="1" y1="15" x2="15" y2="1" stroke="black" stroke-width="1"></line>
+                </svg>
+            </template>
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" fill="black" stroke="black" stroke-width="1"></rect>
+                </svg>
+            </template>
+        </mmr-state-counter>
+        <details class="rules">
+            <summary>Regler</summary>
+            <p contenteditable>Utmattning: Kryss</p>
+            <p contenteditable>Grundutmattning: Ifyllt</p>
+        </details>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Skador</h2>
+        </summary>
+        <details>
+            <summary contenteditable>
+                Smärta
+                <mmr-state-counter max="4">
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                            </rect>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+            </summary>
+            <p contenteditable>-1T6 per kryss för fysiska handlingar</p>
+        </details>
+        <details>
+            <summary contenteditable>
+                Blödning
+                <span style="display: flex; align-items: center">
+                    <mmr-state-counter max="3">
+                        <template>
+                            <svg width="19" height="25">
+                                <path stroke="black" stroke-width="1" fill="transparent"
+                                    d="M 8.520887,24.293613 C 6.3602303,24.037319 4.4872052,23.156576 2.9717736,21.684283 1.2470434,20.00865 0.37482837,17.790146 0.5754502,15.589167 0.68763754,14.358384 1.0115522,13.208955 1.5686665,12.064687 2.1092118,10.954449 2.6986508,10.066696 3.8513754,8.6267021 4.2041859,8.185968 4.9222339,7.2890243 5.4470379,6.6334937 7.0150331,4.6749174 7.7526809,3.5982088 8.8706697,1.6361873 9.1901097,1.075584 9.4631017,0.61627518 9.477319,0.61550104 9.4915362,0.6147271 9.7228536,0.95707953 9.9913577,1.3762847 c 1.2688673,1.9810348 1.9899933,3.0079266 3.9206503,5.5830534 2.672748,3.5649349 3.431079,4.7621659 4.068778,6.4236729 0.933877,2.433193 0.654782,4.911109 -0.798788,7.091965 -1.292698,1.939493 -3.378555,3.253524 -5.895213,3.713819 -0.664869,0.121604 -2.1499351,0.177883 -2.765898,0.104818 z" />
+                            </svg>
+                        </template>
+                        <template>
+                            <svg width="19" height="25">
+                                <path stroke="black" stroke-width="1" fill="red"
+                                    d="M 8.520887,24.293613 C 6.3602303,24.037319 4.4872052,23.156576 2.9717736,21.684283 1.2470434,20.00865 0.37482837,17.790146 0.5754502,15.589167 0.68763754,14.358384 1.0115522,13.208955 1.5686665,12.064687 2.1092118,10.954449 2.6986508,10.066696 3.8513754,8.6267021 4.2041859,8.185968 4.9222339,7.2890243 5.4470379,6.6334937 7.0150331,4.6749174 7.7526809,3.5982088 8.8706697,1.6361873 9.1901097,1.075584 9.4631017,0.61627518 9.477319,0.61550104 9.4915362,0.6147271 9.7228536,0.95707953 9.9913577,1.3762847 c 1.2688673,1.9810348 1.9899933,3.0079266 3.9206503,5.5830534 2.672748,3.5649349 3.431079,4.7621659 4.068778,6.4236729 0.933877,2.433193 0.654782,4.911109 -0.798788,7.091965 -1.292698,1.939493 -3.378555,3.253524 -5.895213,3.713819 -0.664869,0.121604 -2.1499351,0.177883 -2.765898,0.104818 z" />
+                            </svg>
+                        </template>
+                    </mmr-state-counter>
+                    /<input type="number" />
+                </span>
+            </summary>
+            <p contenteditable>Varje runda i slutfasen:</p>
+            <p contenteditable>Utmattningen ökdar med blödningstaken</p>
+        </details>
+        <details>
+            <summary contenteditable>
+                Antänd
+                <div><input type="number" style="text-align: right;" />/<input type="number" /></div>
+            </summary>
+            <p contenteditable>Varje runda i slutfasen:</p>
+            <p contenteditable>Utmattningen ökdar med Hettan</p>
+        </details>
+        <details>
+            <summary contenteditable>
+                Infektion
+                <div><input type="number" style="text-align: right;" />/<input type="number" /></div>
+            </summary>
+            <p contenteditable>Varje dygn:</p>
+            <p contenteditable>Dödsslag mot svårigheten</p>
+            <p contenteditable>Nivån medför grundutmattning</p>
+        </details>
+        <details>
+            <summary contenteditable>Inre skada
+                <mmr-state-counter max="3">
+                    <template>
+                        <svg width="24" height="24">
+                            <rect x="4" y="4" width="14" height="14" fill="transparent" stroke="black" stroke-width="1"
+                                transform-origin="center" transform="rotate(45)"></rect>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="24" height="24">
+                            <rect x="4" y="4" width="14" height="14" fill="red" stroke="black" stroke-width="1"
+                                transform-origin="center" transform="rotate(45)"></rect>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+            </summary>
+            <p contenteditable>Varje dygn:</p>
+            <p contenteditable>Slå 1T10 per Inre skada på tabellen för Inre skador</p>
+        </details>
+    </details>
+</mmr-resize-handle>
+
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Sår</h2>
+        </summary>
+        <div>
+            <table>
+                <tr>
+                    <td contenteditable>Huvud</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Chockslag</td>
+                </tr>
+                <tr>
+                    <td contenteditable>Torso</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Dödsslag</td>
+                </tr>
+                <tr>
+                    <td contenteditable>V. arm</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Stridsfärdighet</td>
+                </tr>
+                <tr>
+                    <td contenteditable>H. arm</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Stridsfärdighet</td>
+                </tr>
+                <tr>
+                    <td contenteditable>V. ben</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Förflyttning</td>
+                </tr>
+                <tr>
+                    <td contenteditable>H. ben</td>
+                    <td>
+                        <div>
+                            <mmr-state-counter max="3">
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                            stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                                <template>
+                                    <svg width="16" height="16">
+                                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                    </svg>
+                                </template>
+                            </mmr-state-counter>
+                        </div>
+                    </td>
+                    <td contenteditable>Förflyttning</td>
+                </tr>
+            </table>
+        </div>
+        <label contenteditable>Övriga skador</label>
+        <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Stridsvärden</h2>
+        </summary>
+        <div>
+            <label contenteditable>Grundrustning</label>
+            <div><input type="number" /></div>
+        </div>
+        <div>
+            <label contenteditable>Grunskada</label>
+            <div><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></div>
+        </div>
+        <details>
+            <summary contenteditable>
+                Läkningstakt
+                <input type="number" />
+            </summary>
+            <p contenteditable>Läkningstakt påverkar läkning av benbrott, smärta och sår</p>
+        </details>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Magi</h2>
+        </summary>
+        <div>
+            <label contenteditable>Max antal vävar</label>
+            <div><input type="number" /></div>
+        </div>
+        <div>
+            <label contenteditable>Borttoning</label>
+            <div><input type="number" /></div>
+        </div>
+        <div>
+            <label contenteditable>Måttlig fältstörning</label>
+            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+        </div>
+        <div>
+            <label contenteditable>Allvarlig fältstörning</label>
+            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+        </div>
+        <div>
+            <label contenteditable>Kritisk fältstörning</label>
+            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+        </div>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Åkallan</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <thead>
+                    <tr>
+                        <th contenteditable>Religion</th>
+                        <th contenteditable>Avvisning/</br>Välsignelse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input></input></td>
+                        <td><input type="number"></input></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Mentalt</h2>
+        </summary>
+        <details>
+            <summary contenteditable>Frånvarande <input type="checkbox" /></summary>
+            <p contenteditable>-2T6 Reaktion, Vaksamhet, Genomsöka, Speja och Spåra</p>
+        </details>
+        <details>
+            <summary contenteditable>Förnekelse <input type="checkbox" /></summary>
+            <p contenteditable>-1 fokus per scen vid konfrontation</p>
+        </details>
+        <details>
+            <summary contenteditable>Katatonisk <input type="checkbox" /></summary>
+            <p contenteditable>Kan ej agera</p>
+        </details>
+        <details>
+            <summary contenteditable>Orkeslös <input type="checkbox" /></summary>
+            <p contenteditable>Inga Fokus från Nivå I för samtliga karaktärsdrag</p>
+        </details>
+        <details>
+            <summary contenteditable>Svårkontaktbar <input type="checkbox" /></summary>
+            <p contenteditable>-2T6 på Sociala färdigheter</p>
+        </details>
+        <label contenteditable>Störningar</label>
+        <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Långvariga vävar & mirakel</h2>
+        </summary>
+        <mmr-block>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+        </mmr-block>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Mysterier</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <thead>
+                    <tr>
+                        <th contenteditable>Namn</th>
+                        <th contenteditable>Beskrivning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input></td>
+                        <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle>
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Utrustning</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <thead>
+                    <tr>
+                        <th contenteditable>Beskrivning</th>
+                        <th contenteditable>Vikt</th>
+                        <th contenteditable>Plats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                        <td><input type="number"></td>
+                        <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                    </tr>
+                    <tr>
+                        <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                        <td><input type="number"></td>
+                        <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                    </tr>
+                    <tr>
+                        <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                        <td><input type="number"></td>
+                        <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Viktiga datum</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <thead>
+                    <tr>
+                        <th contenteditable>Datum</th>
+                        <th contenteditable>Händelse</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                        <td><mmr-resize-handle><textarea></textarea></mmr-resize-handle></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Pengar</h2>
+        </summary>
+        <mmr-table>
+            <table>
+                <thead>
+                    <tr>
+                        <th contenteditable>Förvaring</th>
+                        <th contenteditable>Värde i silver</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input value="Silver i börs"></td>
+                        <td><input type="number" style="width: 100%"/></td>
+                    </tr>
+                    <tr>
+                        <td><input value="Silver i förvar"></td>
+                        <td><input type="number"style="width: 100%"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </mmr-table>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Levnadsstandard</h2>
+        </summary>
+        <div class="flex-form grow">
+            <div>
+                <label contenteditable>Bostad</label>
+                <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+            </div>
+            <div>
+                <label contenteditable>Levnadskostnad</label>
+                <input/>
+            </div>
+            <div>
+                <label contenteditable>Överskott</label>
+                <input/>
+            </div>
+            <div>
+                <label contenteditable>Maximaltlån</label>
+                <input/>
+            </div>
+        </div>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Anteckningar</h2>
+        </summary>
+        <mmr-block>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+        </mmr-block>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Tillfälliga kontaker</h2>
+        </summary>
+        <mmr-block>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+        </mmr-block>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Bakgrund</h2>
+        </summary>
+        <mmr-block>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+            <mmr-resize-handle draggable="true"><textarea></textarea></mmr-resize-handle>
+        </mmr-block>
+    </details>
+</mmr-resize-handle>
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Släkt</h2>
+        </summary>
+        <div class="flex-form grow">
+            <div>
+                <label contenteditable>Släktnamn</label>
+                <input/>
+            </div>
+            <div>
+                <label contenteditable>Moder</label>
+                <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+            </div>
+            <div>
+                <label contenteditable>Fader</label>
+                <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+            </div>
+            <div>
+                <label contenteditable>Syskon</label>
+                <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+            </div>
+            <div>
+                <label contenteditable>Egen familj</label>
+                <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+            </div>
+            <div>
+                <label contenteditable>Om familjen</label>
+                <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+            </div>
+        </div>
+    </details>
+</mmr-resize-handle>
+    </mmr-dynamic-grid>
+</body>
+</html>
+        

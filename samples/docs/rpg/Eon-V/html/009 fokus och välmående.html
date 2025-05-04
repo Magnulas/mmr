@@ -1,0 +1,39 @@
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Fokus & välmående</h2>
+        </summary>
+        <mmr-state-counter max="10" columns="5">
+            <template>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="11" stroke="black" fill="transparent" stroke-width="1"></circle>
+                </svg>
+            </template>
+            <template>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1"></circle>
+                    <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                </svg>
+            </template>
+            <template>
+                <svg width="24" height="24">
+                    <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1"></circle>
+                    <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                    <line x1="19" y2="19" x2="5" y1="5" stroke="black" stroke-width="2"></line>
+                </svg>
+            </template>
+        </mmr-state-counter>
+        <details class="rules">
+            <summary>Regler</summary>
+            <div>
+                <p contenteditable>+1T6: 1 Fokus</p>
+                <p contenteditable>+2T6: 3 Fokus</p>
+                <p contenteditable>+3T6: 6 Fokus</p>
+                <p contenteditable>+4T6: 10 Fokus</p>
+            </div>
+            <p contenteditable>Använt Fokus: Snedstreck</p>
+            <p contenteditable>Minskat Välmående: Kryss</p>
+            <p contenteditable>Minskat maximalt Välmående: Ifyllt</p>
+        </details>
+    </details>
+</mmr-resize-handle>

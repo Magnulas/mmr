@@ -1,0 +1,32 @@
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Utmattning</h2>
+        </summary>
+        <mmr-state-counter max="40" columns="10">
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                    </rect>
+                </svg>
+            </template>
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                    </rect>
+                    <line x1="1" y1="15" x2="15" y2="1" stroke="black" stroke-width="1"></line>
+                </svg>
+            </template>
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" fill="black" stroke="black" stroke-width="1"></rect>
+                </svg>
+            </template>
+        </mmr-state-counter>
+        <details class="rules">
+            <summary>Regler</summary>
+            <p contenteditable>Utmattning: Kryss</p>
+            <p contenteditable>Grundutmattning: Ifyllt</p>
+        </details>
+    </details>
+</mmr-resize-handle>

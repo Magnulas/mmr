@@ -1,0 +1,54 @@
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Karktärsdrag</h2>
+        </summary>
+        <mmr-block class="flex-grid">
+                <div>
+                    <div></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Namn</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Nivå I</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Nivå II</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Nivå III</label></div>
+                    <div></div>
+                </div>
+                <div>
+                    <div><label contenteditable>Primärt</label></div>
+                    <div><input /></label></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div>
+                        <label contenteditable>Låst</label><input type="checkbox" />
+                        <label contenteditable>Svaghet</label><input type="checkbox" />
+                        <label contenteditable>Tvivel</label><input type="checkbox" />
+                        <label contenteditable>Störning</label><input type="checkbox" />
+                    </div>
+                </div>
+                <div draggable="true">
+                    <div><label contenteditable>Sekundärt</label></div>
+                    <div><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div>
+                        <label contenteditable>Låst</label><input type="checkbox" />
+                        <label contenteditable>Svaghet</label><input type="checkbox" />
+                        <label contenteditable>Tvivel</label><input type="checkbox" />
+                        <label contenteditable>Störning</label><input type="checkbox" />
+                    </div>
+                </div>
+        </mmr-block>
+        <details class="rules">
+            <summary>Regler</summary>
+            <p contenteditable>Nivå I ger 1 Fokus (0 om Svaghet eller Tvivel).</p>
+            <p contenteditable>Nivå II ger antingen 3 Fokus (2 om Svaghet), 1 Välmående (ej om Svaghet) eller en Omvälvande
+                händelse. Ger inget om Tvivel.</p>
+            <p contenteditable>Nivå III ger 2 Välmående, återhämtar all Fokus samt ger en Livsavgörande händelse.</p>
+            <p contenteditable>En Omvälvande händelse läker antingen en Efterverkning, låser upp ett Karaktärsdrag eller tar bort en
+                Svaghet från ett Karaktärsdrag.</p>
+            <p contenteditable>En Livsavgörande händelse läker en Störning och samtliga Efterverkningar, eller tar bort låsningar
+                och svagheter från samtliga Karaktärsdrag</p>
+        </details>
+    </details>
+</mmr-resize-handle>

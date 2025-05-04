@@ -1,0 +1,56 @@
+<mmr-resize-handle draggable="true">
+    <details open class="section">
+        <summary>
+            <h2 contenteditable>Belastning</h2>
+        </summary>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th contenteditable>Summa</th>
+                        <th contenteditable>Avdrag</th>
+                        <th contenteditable>Grundutm.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value) $ (v => v<9)(this[0])"></td>
+                        <td>0-8</td>
+                        <td>-</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => 9 <= v && v < 17)(this[0])"></td>
+                        <td>9-16</td>
+                        <td>-</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => 17 <= v && v < 25)(this[0])"></td>
+                        <td>17-24</td>
+                        <td>-1T6</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => 25 <= v && v < 33)(this[0])"></td>
+                        <td>25-32</td>
+                        <td>-2T6</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" name="belastning" data-formula-checked="@DOM('#total-belastning').select(value)  $ (v => v>=33)(this[0])"></td>
+                        <td>33-40</td>
+                        <td>-2T6</td>
+                        <td>6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <details class="rules">
+            <summary>Regler</summary>
+            <p contenteditable>Avdrag gäller:</p>
+            <p contenteditable>Förflyttning, Reaktion & Rörelsefärdigheter</p>
+        </details>
+    </details>
+</mmr-resize-handle>
