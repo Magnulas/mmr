@@ -1,94 +1,46 @@
-<mmr-resize-handle>
+<mmr-resize-handle draggable="true">
     <details open class="section">
         <summary>
-            <h2>Karktärsdrag</h2>
+            <h2 contenteditable>Karktärsdrag</h2>
         </summary>
-        <div>
-            <table>
-                <thead>
-                    <th></th>
-                    <th>Primärt</th>
-                    <th>Sekundärt</th>
-                    <th>Extra sekundärt</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Namn</th>
-                        <td><div><input /></div></td>
-                        <td><div><input /></div></td>
-                        <td><div><input /></div></td>
-                    </tr>
-                    <tr>
-                        <th>Nivå I</th>
-                        <td>
-                            <div><input type="checkbox" /><input /></div>
-                        </td>
-                        <td>
-                            <div><input type="checkbox" /><input /></div>
-                        </td>
-                        <td>
-                            <div><input type="checkbox" /><input /></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Nivå II</th>
-                        <td>
-                            <div><input type="checkbox" /><input /></div>
-                        </td>
-                        <td>
-                            <div><input type="checkbox" /><input /></div>
-                        </td>
-                        <td>
-                            <div><input type="checkbox" /><input /></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Nivå III</th>
-                        <td>
-                            <div><input type="checkbox" /><input /></div>
-                        </td>
-                        <td>
-                            <div><input type="checkbox" /><input /></div>
-                        </td>
-                        <td>
-                            <div><input type="checkbox" /><input /></div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td>
-                            <div>
-                                <label>Låst</label><input type="checkbox" />
-                                <label>Svaghet</label><input type="checkbox" />
-                                <label>Tvivel</label><input type="checkbox" />
-                                <label>Störning</label><input type="checkbox" />
-                            </div>
-                        </td>
-
-                        <td>
-                            <div>
-                                <label>Låst</label><input type="checkbox" />
-                                <label>Svaghet</label><input type="checkbox" />
-                                <label>Tvivel</label><input type="checkbox" />
-                                <label>Störning</label><input type="checkbox" />
-                            </div>
-                        </td>
-                        <td>
-                            <div>
-                                <label>Låst</label><input type="checkbox" />
-                                <label>Svaghet</label><input type="checkbox" />
-                                <label>Tvivel</label><input type="checkbox" />
-                                <label>Störning</label><input type="checkbox" />
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <details>
-            <summary>
-                <p>Regler</p>
-            </summary>
+        <mmr-block class="flex-grid">
+                <div>
+                    <div></div>
+                    <div><label style="text-wrap: nowrap">Namn</label></div>
+                    <div><label style="text-wrap: nowrap">Nivå I</label></div>
+                    <div><label style="text-wrap: nowrap">Nivå II</label></div>
+                    <div><label style="text-wrap: nowrap">Nivå III</label></div>
+                    <div></div>
+                </div>
+                <div>
+                    <div><label>Primärt</label></div>
+                    <div><input /></label></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div>
+                        <label>Låst</label><input type="checkbox" />
+                        <label>Svaghet</label><input type="checkbox" />
+                        <label>Tvivel</label><input type="checkbox" />
+                        <label>Störning</label><input type="checkbox" />
+                    </div>
+                </div>
+                <div draggable="true">
+                    <div><label contenteditable>Sekundärt</label></div>
+                    <div><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div><input type="checkbox" /><input /></div>
+                    <div>
+                        <label>Låst</label><input type="checkbox" />
+                        <label>Svaghet</label><input type="checkbox" />
+                        <label>Tvivel</label><input type="checkbox" />
+                        <label>Störning</label><input type="checkbox" />
+                    </div>
+                </div>
+        </mmr-block>
+        <details class="rules">
+            <summary>Regler</summary>
             <p>Nivå I ger 1 Fokus (0 om Svaghet eller Tvivel).</p>
             <p>Nivå II ger antingen 3 Fokus (2 om Svaghet), 1 Välmående (ej om Svaghet) eller en Omvälvande
                 händelse. Ger inget om Tvivel.</p>

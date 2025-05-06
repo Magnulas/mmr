@@ -1,7 +1,7 @@
-<mmr-resize-handle>
+<mmr-resize-handle draggable="true">
     <details open class="section">
         <summary>
-            <h2>Rustning</h2>
+            <h2 contenteditable>Rustning</h2>
         </summary>
         <mmr-table>
             <table id="rustning">
@@ -173,7 +173,6 @@
                     <td></td>
                     <td></td>
                     <td><input type="number" 
-                            disabled
                             id="total-belastning"
                             data-formula-value="@DOM('#rustning tbody td:first-of-type:has(input:checked) ~ td:nth-of-type(5) > input').select(value) $ this.sum()" />
                     </td>

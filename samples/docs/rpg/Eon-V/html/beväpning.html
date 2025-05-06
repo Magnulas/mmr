@@ -1,7 +1,7 @@
-<mmr-resize-handle>
+<mmr-resize-handle draggable="true">
     <details open class="section">
         <summary>
-            <h2>Beväpning</h2>
+            <h2 contenteditable>Beväpning</h2>
         </summary>
         <mmr-table>
             <table style="text-align: left;">
@@ -15,7 +15,7 @@
                         <th>Egenskaper</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="narstrid">
                     <tr>
                         <td><input type="text" value="Slagsmål"></td>
                         <td>
@@ -53,7 +53,6 @@
                         </td>
                     </tr>
                 </tbody>
-
                 <thead>
                     <tr>
                         <th>Avståndsvapen</th>
@@ -64,17 +63,17 @@
                         <th>Egenskaper</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="avstand">
                     <tr>
                         <td><input></td>
                         <td>
                             <input type="number"></input>T6+<input type="number"></input>
                         </td>
                         <td>
-                            <input style="width: 100px"></input>
+                            <input></input>
                         </td>
                         <td>
-                            <input style="width: 60px"></input>
+                            <input></input>
                         </td>
                         <td>
                             <input type="number"></input>T6+<input type="number"></input>
@@ -84,7 +83,6 @@
                         </td>
                     </tr>
                 </tbody>
-
                 <thead>
                     <tr>
                         <th>Försvar</th>
@@ -95,7 +93,7 @@
                         <th>Egenskaper</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="forsvar">
                     <tr>
                         <td><input value="Undvika"></td>
                         <td>
@@ -111,7 +109,7 @@
                             <input type="number"></input></input>
                         </td>
                         <td>
-                            <textarea>Kontring kan ej väljas</textarea>
+                            <mmr-resize-handle><textarea>Kontring kan ej väljas</textarea></mmr-resize-handle>
                         </td>
                     </tr>
                     <tr>
@@ -134,13 +132,6 @@
                     </tr>
                 </tbody>
             </table>
-        </mmr-table>
-        <mmr-table>
-
-        </mmr-table>
-        <mmr-table>
-
-
         </mmr-table>
     </details>
 </mmr-resize-handle>

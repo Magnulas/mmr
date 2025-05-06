@@ -8,6 +8,80 @@
     height: 406px;
 }
 
+.flex-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-form>* {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.flex-form.grow >*>*:last-child {
+    flex-grow: 1;
+}
+
+.flex-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-grid>* {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-grid>*>* {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-grid>*>*>input:not([type]),
+.flex-grid>*>*>input[type="text"] {
+    width: 40px;
+}
+
+td>input:not([type]):only-child,
+td>input[type="text"]:only-child {
+    width: 100%;
+}
+
+td:has(.ob-dice)+td>input:only-child {
+    width: 2ch;
+}
+
+.ob-dice {
+    text-wrap: nowrap;
+    font-family: GoudyDaval;
+    font-size: 12pt;
+}
+
+.ob-dice > input:first-of-type {
+    text-align: right
+}
+
+.ob-dice > input:last-of-type {
+    text-align: left
+}
+
+.ob-dice>input[type="number"] {
+    min-width: 1ch;
+    width: 4ch;
+}
+
+input[type="number"] {
+    min-width: 1ch;
+    width: 4ch;
+}
+
+
 /*Fonts*/
 @font-face {
     font-family: GoudyDaval;
@@ -20,15 +94,21 @@
 }
 
 body {
+    margin: 0px;
+}
+
+body {
     font-family: PirataOne;
 }
 
 h2 {
-    font-weight: normal
+    font-weight: normal;
+    font-family: PirataOne;
 }
 
 /*Font apperance*/
 label,
+summary,
 th,
 td,
 textarea,
@@ -55,26 +135,23 @@ td label {
     font-weight: normal;
 }
 
-.name {
-    margin: 0px;
-    font-size: 14pt;
-    text-align: center
-}
-
 /*Input*/
-input[type="number"] {
-    min-width: 1ch;
-    width: 5ch;
+
+input[type="checkbox"] {
+    vertical-align: middle;
 }
 
 input:not(:hover)::-webkit-outer-spin-button,
 input:not(:hover)::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
 }
 
 input[type=number]:not(:hover) {
     -moz-appearance: textfield;
+    /* Firefox */
 }
 
 textarea,
@@ -112,8 +189,25 @@ table {
     width: 100%;
 }
 
-summary input {
-    width: 100%;
+tbody.avstand tr td:nth-of-type(3) {
+    width: 100px;
+}
+
+tbody.avstand tr td:nth-of-type(4) {
+    width: 60px;
+}
+
+
+summary input[type="checkbox"] {
+    margin-left: auto
+}
+
+summary>*:last-child {
+    margin-left: auto
+}
+
+summary {
+    font-weight: bold;
 }
 
 /*Font layout*/
@@ -217,7 +311,7 @@ div[contenteditable] {
     overflow: auto;
 }
 
-/*NOTE: This does not work in Firefox. We can work around it by nesting an element and resizing it, but then that element would have to apply its width to the th element otherwise resizing columns wont work*/
+/*NOTE: This does not work in Firefox. We can work around it by nesting an element and resizing it, but then that element would have to apply its widht to the th element otherwise resizing columns wont work*/
 thead th:not(:only-of-type):not(:empty) {
     resize: horizontal;
     overflow: hidden;
@@ -225,6 +319,12 @@ thead th:not(:only-of-type):not(:empty) {
 
 mmr-dynamic-grid {
     --resize-handle-size: 8px;
+}
+
+@media (pointer: coarse) {
+    mmr-dynamic-grid {
+        --resize-handle-size: 20px;
+    }
 }
 
 mmr-resize-handle {
@@ -272,13 +372,24 @@ details.section>div {
 
 summary {
     display: flex;
+    gap: 4px;
 }
 
-summary>*:not(input):first-child {
+details.rules>summary {
+    width: min-content;
     border-bottom: 1px solid black;
-    padding-left: 16px;
-    padding-right: 16px;
 }
+
+details.section>summary>*:first-child,
+details.rules>summary>*:first-child {
+    border-bottom: 1px solid black;
+}
+
+details.rules>summary {
+    font-weight: normal;
+    font-style: italic;
+}
+
 
 summary>*:not(input):first-child>* {
     pointer-events: all;
@@ -290,33 +401,38 @@ summary:has(>input):before {
     color: black;
 }
 
-details:not([open])>summary:has(>input)::before {
-    content: '🞂';
+details:not(.section):not(.rules):not([open])>summary::before {
+    content: '▷';
 }
 
-details[open]>summary:has(>input)::before {
-    content: '🞃';
+details:not(.section):not(.rules)[open]>summary::before {
+    content: '▽';
+}
+
+#name {
+    width: 100%;
+    flex-grow: initial
+}
+
+div:has(#name) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column
+}
+
+div:has(#name)>* {
+    margin: 0px;
+    font-size: 14pt;
+    text-align: center
 }
 
 /*Drag and drop*/
 
-/*Apply a border so the contets don't resize when dragging*/
-mmr-dynamic-grid,
-mmr-dynamic-grid::part(cell) {
-    border: 1px solid rgba(0, 0, 0, 0);
-}
-
-/*Style the grid we're dragging over*/
-mmr-dynamic-grid:state(dragover),
-/*Style the grid cell we're dragging over*/
-mmr-dynamic-grid::part(cell):state(dragover) {
-    border: 1px dashed black;
-}
 
 /*Style the dragged grid cell*/
-mmr-dynamic-grid::part(dragging cell),
-mmr-dynamic-grid:state(dragover)::part(dragging cell) {
-    background-color: rgba(255, 0, 0, 0.3);
+mmr-dynamic-grid::part(cell):state(dragging):not(:state(dragover)) {
+    background-color: rgba(255, 0, 0, 0.3) !important;
 }
 
 /*Style the placeholder for the grid*/
@@ -325,13 +441,23 @@ mmr-dynamic-grid:state(dragover)::part(placeholder) {
 }
 
 /*Style the placeholder for the grid cells*/
-mmr-dynamic-grid:state(dragovercell)::part(placeholder) {
+mmr-dynamic-grid:not(:state(dragover))::part(placeholder) {
     background-color: rgba(0, 255, 0, 0.3);
+}
+
+/*Style the dragged over cell*/
+mmr-dynamic-grid::part(cell):state(dragover) {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+/*Style the grid when drop focus is on the grid*/
+mmr-dynamic-grid:state(dragover) {
+    background-color: rgba(0, 0, 0, 0.1)
 }
 
 /*Style the cell when dragging focus is on the the grid*/
 mmr-dynamic-grid:state(dragover)::part(cell) {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*Padding so we can drag to the left/right edge*/

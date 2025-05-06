@@ -1,7 +1,7 @@
-<mmr-resize-handle>
+<mmr-resize-handle draggable="true">
     <details open class="section">
         <summary>
-            <h2>Utmattning</h2>
+            <h2 contenteditable>Utmattning</h2>
         </summary>
         <mmr-state-counter max="40" style="display: grid; grid-template-columns: repeat(10, 1fr);">
             <template>
@@ -23,10 +23,8 @@
                 </svg>
             </template>
         </mmr-state-counter>
-        <details>
-            <summary>
-                <p>Regler</p>
-            </summary>
+        <details class="rules">
+            <summary>Regler</summary>
             <p>Utmattning: Kryss</p>
             <p>Grundutmattning: Ifyllt</p>
         </details>
