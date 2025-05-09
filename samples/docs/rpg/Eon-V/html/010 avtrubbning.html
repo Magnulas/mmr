@@ -3,11 +3,9 @@
         <summary>
             <h2 contenteditable>Avtrubbning</h2>
         </summary>
-        <div style="display: grid; grid-template-columns: auto repeat(5, 1fr);text-align: center">
-
-            <label style="text-align: left;">Utmattning</label>
-            <mmr-state-counter max="5"
-                style="grid-column: 2 / span 5; display: grid; grid-template-columns: repeat(5,auto);">
+        <div style="display: grid; grid-template-columns: auto repeat(auto, 1fr);text-align: center">
+            <label>Utsatthet</label>
+            <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
                 <template>
                     <svg width="16" height="16">
                         <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
@@ -20,10 +18,9 @@
                     </svg>
                 </template>
             </mmr-state-counter>
-
-            <label style="text-align: left;">Våld</label>
+            <label>Våld</label>
             <mmr-state-counter max="5"
-                style="grid-column: 2 / span 5; display: grid; grid-template-columns: repeat(5,auto);">
+                style="grid-column: 2 / span 5" columns="5">
                 <template>
                     <svg width="16" height="16">
                         <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
@@ -36,10 +33,8 @@
                     </svg>
                 </template>
             </mmr-state-counter>
-
-            <label style="text-align: left;">Övernaturligt</label>
-            <mmr-state-counter max="5"
-                style="grid-column: 2 / span 5; display: grid; grid-template-columns: repeat(5,auto);">
+            <label>Övernaturligt</label>
+            <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
                 <template>
                     <svg width="16" height="16">
                         <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
@@ -52,15 +47,11 @@
                     </svg>
                 </template>
             </mmr-state-counter>
-
             <span></span>
             <span>+5</span>
             <span>+10</span>
             <span>+15</span>
             <span>+20</span>
             <span>+25</span>
-
-            </tbody>
-            </table>
     </details>
 </mmr-resize-handle>

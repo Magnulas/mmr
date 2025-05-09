@@ -8,51 +8,6 @@
     height: 406px;
 }
 
-.flex-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-form>* {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.flex-form.grow >*>*:last-child {
-    flex-grow: 1;
-}
-
-.flex-grid {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-grid>* {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.flex-grid>*>* {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.flex-grid>*>*>input:not([type]),
-.flex-grid>*>*>input[type="text"] {
-    width: 40px;
-}
-
-td>input:not([type]):only-child,
-td>input[type="text"]:only-child {
-    width: 100%;
-}
-
 td:has(.ob-dice)+td>input:only-child {
     width: 2ch;
 }
@@ -76,21 +31,28 @@ td:has(.ob-dice)+td>input:only-child {
     width: 4ch;
 }
 
+input[type="number"]{
+    text-align: center;
+}
+
 input[type="number"] {
     min-width: 1ch;
     width: 4ch;
 }
-
+/*Images*/
+body {
+    background-image: url('../images/helmgast/background.jpg');
+}
 
 /*Fonts*/
 @font-face {
     font-family: GoudyDaval;
-    src: url("https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/fonts/sorts-mill-goudy-master/OFLGoudyStM.otf") format("opentype");
+    src: url("https://magnulas.github.io/mmr/samples/assets/fonts/sorts-mill-goudy-master/OFLGoudyStM.otf") format("opentype");
 }
 
 @font-face {
     font-family: PirataOne;
-    src: url("https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/fonts/pirata-one/PirataOne-Regular.ttf") format("truetype");
+    src: url("https://magnulas.github.io/mmr/samples/assets/fonts/pirata-one/PirataOne-Regular.ttf") format("truetype");
 }
 
 body {
@@ -131,29 +93,15 @@ th {
     font-weight: bold;
 }
 
+label {
+    text-align: left;
+}
+
 td label {
     font-weight: normal;
 }
 
 /*Input*/
-
-input[type="checkbox"] {
-    vertical-align: middle;
-}
-
-input:not(:hover)::-webkit-outer-spin-button,
-input:not(:hover)::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0;
-    /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-input[type=number]:not(:hover) {
-    -moz-appearance: textfield;
-    /* Firefox */
-}
-
 textarea,
 div[contenteditable],
 input {
@@ -165,13 +113,6 @@ input {
     padding: 0px;
 }
 
-
-input:not([type]),
-input[type="text"] {
-    flex-grow: 1;
-    flex-shrink: 1;
-}
-
 textarea,
 div[contenteditable] {
     display: block;
@@ -179,16 +120,6 @@ div[contenteditable] {
 }
 
 /*Tables*/
-td>div {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-table {
-    width: 100%;
-}
-
 tbody.avstand tr td:nth-of-type(3) {
     width: 100px;
 }
@@ -196,7 +127,6 @@ tbody.avstand tr td:nth-of-type(3) {
 tbody.avstand tr td:nth-of-type(4) {
     width: 60px;
 }
-
 
 summary input[type="checkbox"] {
     margin-left: auto
@@ -211,6 +141,10 @@ summary {
 }
 
 /*Font layout*/
+table {
+    width: 100%;
+}
+
 table {
     text-align: center;
 }
@@ -229,11 +163,6 @@ td {
 
 td {
     vertical-align: top;
-}
-
-/*Images*/
-body {
-    background-image: url('https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/images/helmgast/background.jpg');
 }
 
 /*Imgage layout*/
@@ -278,32 +207,8 @@ details.section> :not(summary) {
     overflow: auto;
 }
 
-/*Resize*/
-mmr-resize-handle {
-    display: flex;
-    flex-direction: column;
-}
-
-mmr-resize-handle>mmr-svg-painter:only-child {
-    width: 100%;
-    flex-grow: 1;
-}
-
-mmr-resize-handle>textarea:only-child {
-    resize: none;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-}
-
 mmr-resize-handle:has(>textarea:only-child) {
     height: 24px;
-}
-
-mmr-resize-handle:has(>textarea:only-child)::part(top),
-mmr-resize-handle:has(>textarea:only-child)::part(left),
-mmr-resize-handle:has(>textarea:only-child)::part(right) {
-    display: none;
 }
 
 div[contenteditable] {
@@ -317,45 +222,11 @@ thead th:not(:only-of-type):not(:empty) {
     overflow: hidden;
 }
 
-mmr-dynamic-grid {
-    --resize-handle-size: 8px;
-}
-
-@media (pointer: coarse) {
-    mmr-dynamic-grid {
-        --resize-handle-size: 20px;
-    }
-}
-
-mmr-resize-handle {
-    --handle-size: var(--resize-handle-size)
-}
-
-mmr-embed {
-    resize: both;
-    overflow: hidden;
-}
-
-mmr-dynamic-grid>mmr-resize-handle {
-    padding-left: var(--resize-handle-size);
-    padding-right: var(--resize-handle-size);
-    padding-top: var(--resize-handle-size);
-    padding-bottom: var(--resize-handle-size);
-}
-
-mmr-resize-handle:hover::part(left),
-mmr-resize-handle:hover::part(right),
-mmr-resize-handle:hover::part(top),
-mmr-resize-handle:hover::part(bottom) {
-    background: rgba(0, 0, 0, 0.1)
-}
-
-mmr-dynamic-grid>details:not([open]) {
-    resize: horizontal;
-    overflow: hidden;
-}
-
 /*Details*/
+details {
+    text-align: left;
+}
+
 summary>h2 {
     width: 100%;
     text-align: center;
@@ -363,7 +234,7 @@ summary>h2 {
     margin-bottom: 4px;
 }
 
-details.section>div {
+details.section>div:not(:only-of-type) {
     display: flex;
     align-items: start;
     justify-content: space-between;
@@ -390,16 +261,16 @@ details.rules>summary {
     font-style: italic;
 }
 
-
 summary>*:not(input):first-child>* {
     pointer-events: all;
 }
 
-summary:has(>input):before {
+/*
+summary:has(>input)::before {
     display: inline-block;
     margin-right: 8px;
     color: black;
-}
+}*/
 
 details:not(.section):not(.rules):not([open])>summary::before {
     content: '▷';
@@ -414,54 +285,15 @@ details:not(.section):not(.rules)[open]>summary::before {
     flex-grow: initial
 }
 
-div:has(#name) {
+div:has(> #name) {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column
 }
 
-div:has(#name)>* {
+div:has(> #name)>* {
     margin: 0px;
     font-size: 14pt;
     text-align: center
-}
-
-/*Drag and drop*/
-
-
-/*Style the dragged grid cell*/
-mmr-dynamic-grid::part(cell):state(dragging):not(:state(dragover)) {
-    background-color: rgba(255, 0, 0, 0.3) !important;
-}
-
-/*Style the placeholder for the grid*/
-mmr-dynamic-grid:state(dragover)::part(placeholder) {
-    background-color: rgba(0, 0, 255, 0.3);
-}
-
-/*Style the placeholder for the grid cells*/
-mmr-dynamic-grid:not(:state(dragover))::part(placeholder) {
-    background-color: rgba(0, 255, 0, 0.3);
-}
-
-/*Style the dragged over cell*/
-mmr-dynamic-grid::part(cell):state(dragover) {
-    background-color: rgba(0, 0, 0, 0.1)
-}
-
-/*Style the grid when drop focus is on the grid*/
-mmr-dynamic-grid:state(dragover) {
-    background-color: rgba(0, 0, 0, 0.1)
-}
-
-/*Style the cell when dragging focus is on the the grid*/
-mmr-dynamic-grid:state(dragover)::part(cell) {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/*Padding so we can drag to the left/right edge*/
-mmr-dynamic-grid {
-    padding-left: 10px;
-    padding-right: 10px;
 }

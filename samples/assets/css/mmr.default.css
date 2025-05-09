@@ -1,0 +1,101 @@
+/*Resize*/
+mmr-dynamic-grid {
+    --resize-handle-size: 8px;
+}
+
+@media (pointer: coarse) {
+    mmr-dynamic-grid {
+        --resize-handle-size: 20px;
+    }
+}
+
+mmr-resize-handle {
+    --handle-size: var(--resize-handle-size)
+}
+
+mmr-embed {
+    resize: both;
+    overflow: hidden;
+}
+
+mmr-dynamic-grid>mmr-resize-handle {
+    padding-left: var(--resize-handle-size);
+    padding-right: var(--resize-handle-size);
+    padding-top: var(--resize-handle-size);
+    padding-bottom: var(--resize-handle-size);
+}
+
+mmr-resize-handle:hover::part(left),
+mmr-resize-handle:hover::part(right),
+mmr-resize-handle:hover::part(top),
+mmr-resize-handle:hover::part(bottom) {
+    background: rgba(0, 0, 0, 0.1)
+}
+
+mmr-resize-handle > *:only-child {
+    flex-grow: 1;
+}
+
+mmr-resize-handle>textarea:only-child {
+    resize: none;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+mmr-resize-handle:has(>textarea:only-child)::part(top),
+mmr-resize-handle:has(>textarea:only-child)::part(left),
+mmr-resize-handle:has(>textarea:only-child)::part(right) {
+    display: none;
+}
+
+mmr-resize-handle {
+    display: flex;
+    flex-direction: column;
+}
+
+mmr-resize-handle:has(mmr-resize-handle:last-child)::part(bottom),
+mmr-resize-handle:has(mmr-resize-handle:last-child)::part(top) {
+    display: none;
+}
+
+mmr-resize-handle>mmr-svg-painter:only-child {
+    width: 100%;
+}
+
+/*Drag and drop*/
+/*Style the dragged grid cell*/
+mmr-dynamic-grid::part(cell):state(dragging):not(:state(dragover)) {
+    background-color: rgba(255, 0, 0, 0.3) !important;
+}
+
+/*Style the placeholder for the grid*/
+mmr-dynamic-grid:state(dragover)::part(placeholder) {
+    background-color: rgba(0, 0, 255, 0.3);
+}
+
+/*Style the placeholder for the grid cells*/
+mmr-dynamic-grid:not(:state(dragover))::part(placeholder) {
+    background-color: rgba(0, 255, 0, 0.3);
+}
+
+/*Style the dragged over cell*/
+mmr-dynamic-grid::part(cell):state(dragover) {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+/*Style the grid when drop focus is on the grid*/
+mmr-dynamic-grid:state(dragover) {
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+/*Style the cell when dragging focus is on the the grid*/
+mmr-dynamic-grid:state(dragover)::part(cell) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/*Padding so we can drag to the left/right edge*/
+mmr-dynamic-grid {
+    padding-left: 10px;
+    padding-right: 10px;
+}
