@@ -56,9 +56,10 @@ td>div {
     gap: 4px;
 }
 
+input,
+textarea,
 *[contenteditable] {
     min-width: 1ch;
-    display: inline-block;
 }
 
 .flex-row {
@@ -80,4 +81,8 @@ input:not([type]),
 input[type="text"] {
     flex-grow: 1;
     flex-shrink: 1;
+}
+
+td:first-of-type:has(label) {
+    text-align: left;
 }

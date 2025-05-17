@@ -8,7 +8,7 @@
     height: 406px;
 }
 
-td:has(.ob-dice)+td>input:only-child {
+td:has(.ob-dice)+td:last-child>input:only-child {
     width: 2ch;
 }
 
@@ -296,4 +296,8 @@ div:has(> #name)>* {
     margin: 0px;
     font-size: 14pt;
     text-align: center
+}
+
+td:first-of-type:has(+ td >.ob-dice){
+    text-align: left;
 }

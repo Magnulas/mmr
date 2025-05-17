@@ -7,12 +7,12 @@
             <table id="rustning">
                 <thead>
                     <tr>
-                        <th>Rustningsdel</th>
-                        <th>Hugg</th>
-                        <th>Kross</th>
-                        <th>Stick</th>
-                        <th>Belastning</th>
-                        <th>Egenskaper</th>
+                        <th contenteditable>Rustningsdel</th>
+                        <th contenteditable>Hugg</th>
+                        <th contenteditable>Kross</th>
+                        <th contenteditable>Stick</th>
+                        <th contenteditable>Belastning</th>
+                        <th contenteditable>Egenskaper</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,8 +20,31 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="1 Huvud" style="width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">1 Huvud</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />                                
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">2-4 Torso</label>
                                 <input>
                             </div>
                         </td>
@@ -45,8 +68,7 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="2-4 Torso" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">5-6 V. arm</label>
                                 <input>
                             </div>
                         </td>
@@ -70,8 +92,7 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="5-6 V. arm" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">7-8 H. arm</label>
                                 <input>
                             </div>
                         </td>
@@ -95,8 +116,7 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="7-8 H. arm" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">9 V. ben</label>
                                 <input>
                             </div>
                         </td>
@@ -120,33 +140,7 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="9 V. ben" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
-                                <input>
-                            </div>
-                        </td>
-                        <td>
-                            <input type="number"></input>
-                        </td>
-                        <td>
-                            <input type="number"></input>
-                        </td>
-                        <td>
-                            <input type="number"></input>
-                        </td>
-                        <td>
-                            <input type="number"></input>
-                        </td>
-                        <td>
-                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <input type="checkbox" />
-                                <input value="10 H. ben" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">10 H. ben</label>
                                 <input>
                             </div>
                         </td>

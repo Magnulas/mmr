@@ -4,15 +4,10 @@
     <title data-formula-text="@DOM('#name').select(value) $ this[0]"></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.3/samples/assets/css/mmr.default.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.3/samples/assets/css/rpg.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.3/samples/docs/rpg/Eon-V/assets/css/eon.css">
-    <script src="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.3/lib/mmr.bundle.js" type="text/javascript"></script>
-    <!--<link rel="stylesheet" href="https://magnulas.github.io/mmr/samples/assets/css/mmr.default.css">
-    <link rel="stylesheet" href="https://magnulas.github.io/mmr/samples/assets/css/rpg.css">
-    <link rel="stylesheet" href="https://magnulas.github.io/mmr/samples/docs/rpg/Eon-V/assets/css/eon.css">
-    <script src="https://magnulas.github.io/mmr/lib/mmr.bundle.js" type="text/javascript"></script>-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.4/samples/assets/css/mmr.default.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.4/samples/assets/css/rpg.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.4/samples/docs/rpg/Eon-V/assets/css/eon.css">
+    <script src="https://cdn.jsdelivr.net/gh/magnulas/mmr@0.0.4/lib/mmr.bundle.js" type="text/javascript"></script>
     <script type="text/javascript">
         window.myHooks.saveWebPageOnExitHook()
         window.myHooks.loadWebPageOnLoadHook()
@@ -49,7 +44,7 @@
             <foreignObject x="230" y="340" height="60" width="400">
                 <div xlmns="http://www.w3.org/1999/xhtml" draggable="true">
                     <input id="name">
-                    <label>Namn</label>
+                    <label contenteditable>Namn</label>
                 </div>
             </foreignObject>
         </svg>
@@ -61,17 +56,17 @@
             <h2 contenteditable>Rollpersonen</h2>
         </summary>
         <div class="flex-form grow">
-            <div><label>Folkslag</label><input /></div>
-            <div><label>Kön</label><input /></div>
-            <div><label>Ålder</label><input /></div>
-            <div><label>Religion</label><input /></div>
-            <div><label>Värv</label><input /></div>
-            <div><label>Hemland</label><input /></div>
-            <div><label>Hemort</label><input /></div>
-            <div><label>Levnadsstandard</label><input /></div>
-            <div><label>Längd</label><input /></div>
-            <div><label>Vikt</label><input /></div>
-            <div><label>Vapenarm</label><input /></div>
+            <div><label contenteditable>Folkslag</label><input /></div>
+            <div><label contenteditable>Kön</label><input /></div>
+            <div><label contenteditable>Ålder</label><input /></div>
+            <div><label contenteditable>Religion</label><input /></div>
+            <div><label contenteditable>Värv</label><input /></div>
+            <div><label contenteditable>Hemland</label><input /></div>
+            <div><label contenteditable>Hemort</label><input /></div>
+            <div><label contenteditable>Levnadsstandard</label><input /></div>
+            <div><label contenteditable>Längd</label><input /></div>
+            <div><label contenteditable>Vikt</label><input /></div>
+            <div><label contenteditable>Vapenarm</label><input /></div>
         </div>
     </details>
 </mmr-resize-handle>
@@ -84,8 +79,8 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Namn</th>
-                        <th>Anteckningar</th>
+                        <th contenteditable>Namn</th>
+                        <th contenteditable>Anteckningar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -146,23 +141,23 @@
         <mmr-block class="flex-grid">
                 <div>
                     <div></div>
-                    <div><label style="text-wrap: nowrap">Namn</label></div>
-                    <div><label style="text-wrap: nowrap">Nivå I</label></div>
-                    <div><label style="text-wrap: nowrap">Nivå II</label></div>
-                    <div><label style="text-wrap: nowrap">Nivå III</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Namn</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Nivå I</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Nivå II</label></div>
+                    <div><label contenteditable style="text-wrap: nowrap">Nivå III</label></div>
                     <div></div>
                 </div>
                 <div>
-                    <div><label>Primärt</label></div>
+                    <div><label contenteditable>Primärt</label></div>
                     <div><input /></label></div>
                     <div><input type="checkbox" /><input /></div>
                     <div><input type="checkbox" /><input /></div>
                     <div><input type="checkbox" /><input /></div>
                     <div>
-                        <label>Låst</label><input type="checkbox" />
-                        <label>Svaghet</label><input type="checkbox" />
-                        <label>Tvivel</label><input type="checkbox" />
-                        <label>Störning</label><input type="checkbox" />
+                        <label contenteditable>Låst</label><input type="checkbox" />
+                        <label contenteditable>Svaghet</label><input type="checkbox" />
+                        <label contenteditable>Tvivel</label><input type="checkbox" />
+                        <label contenteditable>Störning</label><input type="checkbox" />
                     </div>
                 </div>
                 <div draggable="true">
@@ -172,22 +167,22 @@
                     <div><input type="checkbox" /><input /></div>
                     <div><input type="checkbox" /><input /></div>
                     <div>
-                        <label>Låst</label><input type="checkbox" />
-                        <label>Svaghet</label><input type="checkbox" />
-                        <label>Tvivel</label><input type="checkbox" />
-                        <label>Störning</label><input type="checkbox" />
+                        <label contenteditable>Låst</label><input type="checkbox" />
+                        <label contenteditable>Svaghet</label><input type="checkbox" />
+                        <label contenteditable>Tvivel</label><input type="checkbox" />
+                        <label contenteditable>Störning</label><input type="checkbox" />
                     </div>
                 </div>
         </mmr-block>
         <details class="rules">
             <summary>Regler</summary>
-            <p>Nivå I ger 1 Fokus (0 om Svaghet eller Tvivel).</p>
-            <p>Nivå II ger antingen 3 Fokus (2 om Svaghet), 1 Välmående (ej om Svaghet) eller en Omvälvande
+            <p contenteditable>Nivå I ger 1 Fokus (0 om Svaghet eller Tvivel).</p>
+            <p contenteditable>Nivå II ger antingen 3 Fokus (2 om Svaghet), 1 Välmående (ej om Svaghet) eller en Omvälvande
                 händelse. Ger inget om Tvivel.</p>
-            <p>Nivå III ger 2 Välmående, återhämtar all Fokus samt ger en Livsavgörande händelse.</p>
-            <p>En Omvälvande händelse läker antingen en Efterverkning, låser upp ett Karaktärsdrag eller tar bort en
+            <p contenteditable>Nivå III ger 2 Välmående, återhämtar all Fokus samt ger en Livsavgörande händelse.</p>
+            <p contenteditable>En Omvälvande händelse läker antingen en Efterverkning, låser upp ett Karaktärsdrag eller tar bort en
                 Svaghet från ett Karaktärsdrag.</p>
-            <p>En Livsavgörande händelse läker en Störning och samtliga Efterverkningar, eller tar bort låsningar
+            <p contenteditable>En Livsavgörande händelse läker en Störning och samtliga Efterverkningar, eller tar bort låsningar
                 och svagheter från samtliga Karaktärsdrag</p>
         </details>
     </details>
@@ -199,35 +194,35 @@
         </summary>
         <div class="flex-form">
             <div>
-                <label>Förflyttning</label>
+                <label contenteditable>Förflyttning</label>
                 <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
             </div>
             <div>
-                <label>Intryck</label>
+                <label contenteditable>Intryck</label>
                 <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
             </div>
             <div>
-                <label>Kroppsbyggnad</label>
+                <label contenteditable>Kroppsbyggnad</label>
                 <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
             </div>
             <div>
-                <label>Livskraft</label>
+                <label contenteditable>Livskraft</label>
                 <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
             </div>
             <div>
-                <label>Reaktion</label>
+                <label contenteditable>Reaktion</label>
                 <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
             </div>
             <div>
-                <label>Självkontroll</label>
+                <label contenteditable>Självkontroll</label>
                 <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
             </div>
             <div>
-                <label>Vaksamhet</label>
+                <label contenteditable>Vaksamhet</label>
                 <span class="ob-dice"><input type="number" />T6+<input type="number" /></span>
             </div>
             <div>
-                <label>Visdom</label>
+                <label contenteditable>Visdom</label>
                 <input type="number" />
             </div>
         </div>
@@ -261,14 +256,14 @@
         <details class="rules">
             <summary>Regler</summary>
             <div>
-                <p>+1T6: 1 Fokus</p>
-                <p>+2T6: 3 Fokus</p>
-                <p>+3T6: 6 Fokus</p>
-                <p>+4T6: 10 Fokus</p>
+                <p contenteditable>+1T6: 1 Fokus</p>
+                <p contenteditable>+2T6: 3 Fokus</p>
+                <p contenteditable>+3T6: 6 Fokus</p>
+                <p contenteditable>+4T6: 10 Fokus</p>
             </div>
-            <p>Använt Fokus: Snedstreck</p>
-            <p>Minskat Välmående: Kryss</p>
-            <p>Minskat maximalt Välmående: Ifyllt</p>
+            <p contenteditable>Använt Fokus: Snedstreck</p>
+            <p contenteditable>Minskat Välmående: Kryss</p>
+            <p contenteditable>Minskat maximalt Välmående: Ifyllt</p>
         </details>
     </details>
 </mmr-resize-handle>
@@ -278,7 +273,7 @@
             <h2 contenteditable>Avtrubbning</h2>
         </summary>
         <div style="display: grid; grid-template-columns: auto repeat(auto, 1fr);text-align: center">
-            <label>Utsatthet</label>
+            <label contenteditable>Utsatthet</label>
             <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
                 <template>
                     <svg width="16" height="16">
@@ -292,9 +287,8 @@
                     </svg>
                 </template>
             </mmr-state-counter>
-            <label>Våld</label>
-            <mmr-state-counter max="5"
-                style="grid-column: 2 / span 5" columns="5">
+            <label contenteditable>Våld</label>
+            <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
                 <template>
                     <svg width="16" height="16">
                         <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
@@ -307,7 +301,7 @@
                     </svg>
                 </template>
             </mmr-state-counter>
-            <label>Övernaturligt</label>
+            <label contenteditable>Övernaturligt</label>
             <mmr-state-counter max="5" style="grid-column: 2 / span 5" columns="5">
                 <template>
                     <svg width="16" height="16">
@@ -338,8 +332,8 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Talspråk</th>
-                        <th>Skriftspråk</th>
+                        <th contenteditable>Talspråk</th>
+                        <th contenteditable>Skriftspråk</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -361,62 +355,62 @@
             <table>
                 <tbody>
                     <tr>
-                        <td><input value="Argumenera" /></td>
+                        <td contenteditable>Argumentera</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Berättarkonst" /></td>
+                        <td contenteditable>Berättarkonst</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Charm" /></td>
+                        <td contenteditable>Charm</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Dupera" /></td>
+                        <td contenteditable>Dupera</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Genomskåda" /></td>
+                        <td contenteditable>Genomskåda</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Handel" /></td>
+                        <td contenteditable>Handel</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Hovliv" /></td>
+                        <td contenteditable>Hovliv</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Injaga fruktan" /></td>
+                        <td contenteditable>Injaga fruktan</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Ledarskap" /></td>
+                        <td contenteditable>Ledarskap</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Skumraskaffärer" /></td>
+                        <td contenteditable>Skumraskaffärer</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Spel & dobbel" /></td>
+                        <td contenteditable>Spel & dobbel</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Sång & musik" /></td>
+                        <td contenteditable>Sång & musik</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
@@ -434,67 +428,67 @@
             <table>
                 <tbody>
                     <tr>
-                        <td><input value="Filosofi" /></td>
+                        <td contenteditable>Filosofi</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Geografi" /></td>
+                        <td contenteditable>Geografi</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Gifter & droger" /></td>
+                        <td contenteditable>Gifter & droger</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Historia" /></td>
+                        <td contenteditable>Historia</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Kalkylera" /></td>
+                        <td contenteditable>Kalkylera</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Krigsföring" /></td>
+                        <td contenteditable>Krigsföring</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Kulturkännedom" /></td>
+                        <td contenteditable>Kulturkännedom</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Lagkunskap" /></td>
+                        <td contenteditable>Lagkunskap</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Läkekonst" /></td>
+                        <td contenteditable>Läkekonst</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Ockultism" /></td>
+                        <td contenteditable>Ockultism</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Teologi" /></td>
+                        <td contenteditable>Teologi</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Teoretisk magi" /></td>
+                        <td contenteditable>Teoretisk magi</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Undervisa" /></td>
+                        <td contenteditable>Undervisa</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
@@ -512,47 +506,47 @@
             <table>
                 <tbody>
                     <tr>
-                        <td><input value="Genomsöka" /></td>
+                        <td contenteditable>Genomsöka</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Jakt & fiske" /></td>
+                        <td contenteditable>Jakt & fiske</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Naturlära" /></td>
+                        <td contenteditable>Naturlära</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Orientera" /></td>
+                        <td contenteditable>Orientera</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Rida" /></td>
+                        <td contenteditable>Rida</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Sjömannaskap" /></td>
+                        <td contenteditable>Sjömannaskap</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Speja" /></td>
+                        <td contenteditable>Speja</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Spåra" /></td>
+                        <td contenteditable>Spåra</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Vildmarksvana" /></td>
+                        <td contenteditable>Vildmarksvana</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
@@ -570,47 +564,47 @@
             <table>
                 <tbody>
                     <tr>
-                        <td><input value="Dansa" /></td>
+                        <td contenteditable>Dansa</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Fingerfärdighet" /></td>
+                        <td contenteditable>Fingerfärdighet</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Gömma" /></td>
+                        <td contenteditable>Gömma</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Hoppa" /></td>
+                        <td contenteditable>Hoppa</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Klättra" /></td>
+                        <td contenteditable>Klättra</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Marsch" /></td>
+                        <td contenteditable>Marsch</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Simma" /></td>
+                        <td contenteditable>Simma</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Smyga" /></td>
+                        <td contenteditable>Smyga</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Undvika" /></td>
+                        <td contenteditable>Undvika</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
@@ -656,7 +650,7 @@
             <table>
                 <tbody>
                     <tr>
-                        <td><input value="Slagsmål" /></td>
+                        <td contenteditable>Slagsmål</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
@@ -679,27 +673,27 @@
             <table>
                 <tbody>
                     <tr>
-                        <td><input value="Cermoni" /></td>
+                        <td contenteditable>Cermoni</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Förnimma" /></td>
+                        <td contenteditable>Förnimma</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Förvränga" /></td>
+                        <td contenteditable>Förvränga</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Harmonisera" /></td>
+                        <td contenteditable>Harmonisera</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
                     <tr>
-                        <td><input value="Kanalisera" /></td>
+                        <td contenteditable>Kanalisera</td>
                         <td><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></td>
                         <td><input></input></td>
                     </tr>
@@ -719,120 +713,120 @@
             <h2 contenteditable>Erfarenhet</h2>
         </summary>
         <div>
-            <label>Oanvänd erfarnhet</label>
+            <label contenteditable>Oanvänd erfarnhet</label>
             <input type="number" />
         </div>
         <div>
             <details class="rules" style="width: min-content;">
                 <summary>Regler</summary>
                 <div>
-                    <h3>Ny kunskap</h3>
+                    <h3 contenteditable>Ny kunskap</h3>
                     <table>
                         <thead>
                             <tr>
-                                <th>Visdom</th>
-                                <th>Erfarenhetskostnad</th>
+                                <th contenteditable>Visdom</th>
+                                <th contenteditable>Erfarenhetskostnad</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>4-5</td>
-                                <td>10</td>
+                                <td contenteditable>4-5</td>
+                                <td contenteditable>10</td>
                             </tr>
                             <tr>
-                                <td>6-7</td>
-                                <td>8</td>
+                                <td contenteditable>6-7</td>
+                                <td contenteditable>8</td>
                             </tr>
                             <tr>
-                                <td>8-9</td>
-                                <td>6</td>
+                                <td contenteditable>8-9</td>
+                                <td contenteditable>6</td>
                             </tr>
                             <tr>
-                                <td>10-11</td>
-                                <td>5</td>
+                                <td contenteditable>10-11</td>
+                                <td contenteditable>5</td>
                             </tr>
                             <tr>
-                                <td>12-15</td>
-                                <td>4</td>
+                                <td contenteditable>12-15</td>
+                                <td contenteditable>4</td>
                             </tr>
                             <tr>
-                                <td>16-19</td>
-                                <td>3</td>
+                                <td contenteditable>16-19</td>
+                                <td contenteditable>3</td>
                             </tr>
                             <tr>
-                                <td>20+</td>
-                                <td>2</td>
+                                <td contenteditable>20+</td>
+                                <td contenteditable>2</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div>
-                    <h3>Attributt</h3>
-                    <p>+1 i ett Attribut / 8 erfarenhet</p>
-                    <p>Ett enskilt attribut kan maximalt höjas 4 gånger</p>
+                    <h3 contenteditable>Attributt</h3>
+                    <p contenteditable>+1 i ett Attribut / 8 erfarenhet</p>
+                    <p contenteditable>Ett enskilt attribut kan maximalt höjas 4 gånger</p>
                     <table>
                         <tbody>
                             <tr>
-                                <td><label>Förflyttning</label></td>
+                                <td contenteditable>Förflyttning</td>
                                 <td><input type="number" /></td>
                             </tr>
                             <tr>
-                                <td><label>Intryck</label></td>
+                                <td contenteditable>Intryck</td>
                                 <td><input type="number" /></td>
                             </tr>
                             <tr>
-                                <td><label>Kroppsbyggnad</label></td>
+                                <td contenteditable>Kroppsbyggnad</td>
                                 <td><input type="number" /></td>
                             </tr>
                             <tr>
-                                <td><label>Livskraft</label></td>
+                                <td contenteditable>Livskraft</td>
                                 <td><input type="number" /></td>
                             </tr>
                             <tr>
-                                <td><label>Reaktion</label></td>
+                                <td contenteditable>Reaktion</td>
                                 <td><input type="number" /></td>
                             </tr>
                             <tr>
-                                <td><label>Självkontroll</label></td>
+                                <td contenteditable>Självkontroll</td>
                                 <td><input type="number" /></td>
                             </tr>
                             <tr>
-                                <td><label>Vaksamhet</label></td>
+                                <td contenteditable>Vaksamhet</td>
                                 <td><input type="number" /></td>
                             </tr>
                             <tr>
-                                <td><label>Visdom</label></td>
+                                <td contenteditable>Visdom</td>
                                 <td><input type="number" /></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div>
-                    <h3>Färdigheter</h3>
+                    <h3 contenteditable>Färdigheter</h3>
                     <table>
                         <tr>
-                            <td>+1 vid 2T6</td>
-                            <td>1 erfarenhet</td>
+                            <td contenteditable>+1 vid 2T6</td>
+                            <td contenteditable>1 erfarenhet</td>
                         </tr>
                         <tr>
-                            <td>+1 vid 3T6</td>
-                            <td>2 erfarenhet</td>
+                            <td contenteditable>+1 vid 3T6</td>
+                            <td contenteditable>2 erfarenhet</td>
                         </tr>
                         <tr>
-                            <td>+1 vid 4T6</td>
-                            <td>4 erfarenhet</td>
+                            <td contenteditable>+1 vid 4T6</td>
+                            <td contenteditable>4 erfarenhet</td>
                         </tr>
                         <tr>
-                            <td>+1 vid 5T6</td>
-                            <td>8 erfarenhet</td>
+                            <td contenteditable>+1 vid 5T6</td>
+                            <td contenteditable>8 erfarenhet</td>
                         </tr>
                         <tr>
-                            <td>+1 vid 6T6</td>
-                            <td>16 erfarenhet</td>
+                            <td contenteditable>+1 vid 6T6</td>
+                            <td contenteditable>16 erfarenhet</td>
                         </tr>
                         <tr>
-                            <td>+1 vid (+1T6)</td>
-                            <td>(x2)</td>
+                            <td contenteditable>+1 vid (+1T6)</td>
+                            <td contenteditable>(x2)</td>
                         </tr>
                     </table>
                 </div>
@@ -873,9 +867,9 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Summa</th>
-                        <th>Avdrag</th>
-                        <th>Grundutm.</th>
+                        <th contenteditable>Summa</th>
+                        <th contenteditable>Avdrag</th>
+                        <th contenteditable>Grundutm.</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -914,9 +908,8 @@
         </div>
         <details class="rules">
             <summary>Regler</summary>
-            <p>Avdrag gäller:</p>
-            <p>Förflyttning, Reaktion & Rörelsefärdigheter</p>
-
+            <p contenteditable>Avdrag gäller:</p>
+            <p contenteditable>Förflyttning, Reaktion & Rörelsefärdigheter</p>
         </details>
     </details>
 </mmr-resize-handle>
@@ -929,12 +922,12 @@
             <table id="rustning">
                 <thead>
                     <tr>
-                        <th>Rustningsdel</th>
-                        <th>Hugg</th>
-                        <th>Kross</th>
-                        <th>Stick</th>
-                        <th>Belastning</th>
-                        <th>Egenskaper</th>
+                        <th contenteditable>Rustningsdel</th>
+                        <th contenteditable>Hugg</th>
+                        <th contenteditable>Kross</th>
+                        <th contenteditable>Stick</th>
+                        <th contenteditable>Belastning</th>
+                        <th contenteditable>Egenskaper</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -942,8 +935,31 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="1 Huvud" style="width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">1 Huvud</label>
+                                <input>
+                            </div>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <input type="number"></input>
+                        </td>
+                        <td>
+                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <input type="checkbox" />                                
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">2-4 Torso</label>
                                 <input>
                             </div>
                         </td>
@@ -967,8 +983,7 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="2-4 Torso" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">5-6 V. arm</label>
                                 <input>
                             </div>
                         </td>
@@ -992,8 +1007,7 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="5-6 V. arm" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">7-8 H. arm</label>
                                 <input>
                             </div>
                         </td>
@@ -1017,8 +1031,7 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="7-8 H. arm" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">9 V. ben</label>
                                 <input>
                             </div>
                         </td>
@@ -1042,33 +1055,7 @@
                         <td>
                             <div>
                                 <input type="checkbox" />
-                                <input value="9 V. ben" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
-                                <input>
-                            </div>
-                        </td>
-                        <td>
-                            <input type="number"></input>
-                        </td>
-                        <td>
-                            <input type="number"></input>
-                        </td>
-                        <td>
-                            <input type="number"></input>
-                        </td>
-                        <td>
-                            <input type="number"></input>
-                        </td>
-                        <td>
-                            <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div>
-                                <input type="checkbox" />
-                                <input value="10 H. ben" style="min-width:1ch;width:9ch"
-                                    onkeypress="this.style.width = (this.value.length) + 'ch';">
+                                <label style="width:9ch" contenteditable onkeypress="this.style.width = (this.value.length) + 'ch';">10 H. ben</label>
                                 <input>
                             </div>
                         </td>
@@ -1113,9 +1100,9 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Skada</th>
-                        <th>Utmattn.</th>
-                        <th>Skadetabell</th>
+                        <th contenteditable>Skada</th>
+                        <th contenteditable>Utmattn.</th>
+                        <th contenteditable>Skadetabell</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1183,17 +1170,17 @@
             <table style="text-align: left;">
                 <thead>
                     <tr>
-                        <th>Närstridsvapen</th>
-                        <th>Färdighet</th>
-                        <th>Hugg</th>
-                        <th>Kross</th>
-                        <th>Stick</th>
-                        <th>Egenskaper</th>
+                        <th contenteditable>Närstridsvapen</th>
+                        <th contenteditable>Färdighet</th>
+                        <th contenteditable>Hugg</th>
+                        <th contenteditable>Kross</th>
+                        <th contenteditable>Stick</th>
+                        <th contenteditable>Egenskaper</th>
                     </tr>
                 </thead>
                 <tbody class="narstrid">
                     <tr>
-                        <td><input type="text" value="Slagsmål"></td>
+                        <td contenteditable>Slagsmål</td>
                         <td>
                             <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
                         </td>
@@ -1231,12 +1218,12 @@
                 </tbody>
                 <thead>
                     <tr>
-                        <th>Avståndsvapen</th>
-                        <th>Färdighet</th>
-                        <th>Räckvidd</th>
-                        <th>Typ</th>
-                        <th>Skada</th>
-                        <th>Egenskaper</th>
+                        <th contenteditable>Avståndsvapen</th>
+                        <th contenteditable>Färdighet</th>
+                        <th contenteditable>Räckvidd</th>
+                        <th contenteditable>Typ</th>
+                        <th contenteditable>Skada</th>
+                        <th contenteditable>Egenskaper</th>
                     </tr>
                 </thead>
                 <tbody class="avstand">
@@ -1261,17 +1248,17 @@
                 </tbody>
                 <thead>
                     <tr>
-                        <th>Försvar</th>
-                        <th>Färdighet</th>
-                        <th>Närstrid</th>
-                        <th>Avstånd</th>
-                        <th>Skydd</th>
-                        <th>Egenskaper</th>
+                        <th contenteditable>Försvar</th>
+                        <th contenteditable>Färdighet</th>
+                        <th contenteditable>Närstrid</th>
+                        <th contenteditable>Avstånd</th>
+                        <th contenteditable>Skydd</th>
+                        <th contenteditable>Egenskaper</th>
                     </tr>
                 </thead>
                 <tbody class="forsvar">
                     <tr>
-                        <td><input value="Undvika"></td>
+                        <td contenteditable>Undvika</td>
                         <td>
                             <span class="ob-dice"><input type="number"></input>T6+<input type="number"></input></span>
                         </td>
@@ -1338,8 +1325,8 @@
         </mmr-state-counter>
         <details class="rules">
             <summary>Regler</summary>
-            <p>Utmattning: Kryss</p>
-            <p>Grundutmattning: Ifyllt</p>
+            <p contenteditable>Utmattning: Kryss</p>
+            <p contenteditable>Grundutmattning: Ifyllt</p>
         </details>
     </details>
 </mmr-resize-handle>
@@ -1349,7 +1336,7 @@
             <h2 contenteditable>Skador</h2>
         </summary>
         <details>
-            <summary>
+            <summary contenteditable>
                 Smärta
                 <mmr-state-counter max="4">
                     <template>
@@ -1365,10 +1352,10 @@
                     </template>
                 </mmr-state-counter>
             </summary>
-            <p>-1T6 per kryss för fysiska handlingar</p>
+            <p contenteditable>-1T6 per kryss för fysiska handlingar</p>
         </details>
         <details>
-            <summary>
+            <summary contenteditable>
                 Blödning
                 <span style="display: flex; align-items: center">
                     <mmr-state-counter max="3">
@@ -1388,28 +1375,28 @@
                     /<input type="number" />
                 </span>
             </summary>
-            <p>Varje runda i slutfasen:</p>
-            <p>Utmattningen ökdar med blödningstaken</p>
+            <p contenteditable>Varje runda i slutfasen:</p>
+            <p contenteditable>Utmattningen ökdar med blödningstaken</p>
         </details>
         <details>
-            <summary>
+            <summary contenteditable>
                 Antänd
                 <div><input type="number" style="text-align: right;" />/<input type="number" /></div>
             </summary>
-            <p>Varje runda i slutfasen:</p>
-            <p>Utmattningen ökdar med Hettan</p>
+            <p contenteditable>Varje runda i slutfasen:</p>
+            <p contenteditable>Utmattningen ökdar med Hettan</p>
         </details>
         <details>
-            <summary>
+            <summary contenteditable>
                 Infektion
                 <div><input type="number" style="text-align: right;" />/<input type="number" /></div>
             </summary>
-            <p>Varje dygn:</p>
-            <p>Dödsslag mot svårigheten</p>
-            <p>Nivån medför grundutmattning</p>
+            <p contenteditable>Varje dygn:</p>
+            <p contenteditable>Dödsslag mot svårigheten</p>
+            <p contenteditable>Nivån medför grundutmattning</p>
         </details>
         <details>
-            <summary>Inre skada
+            <summary contenteditable>Inre skada
                 <mmr-state-counter max="3">
                     <template>
                         <svg width="24" height="24">
@@ -1425,8 +1412,8 @@
                     </template>
                 </mmr-state-counter>
             </summary>
-            <p>Varje dygn:</p>
-            <p>Slå 1T10 per Inre skada på tabellen för Inre skador</p>
+            <p contenteditable>Varje dygn:</p>
+            <p contenteditable>Slå 1T10 per Inre skada på tabellen för Inre skador</p>
         </details>
     </details>
 </mmr-resize-handle>
@@ -1434,12 +1421,12 @@
 <mmr-resize-handle draggable="true">
     <details open class="section">
         <summary>
-            <h2>Sår</h2>
+            <h2 contenteditable>Sår</h2>
         </summary>
         <div>
             <table>
                 <tr>
-                    <td><label>Huvud</label></td>
+                    <td contenteditable>Huvud</td>
                     <td>
                         <div>
                             <mmr-state-counter max="3">
@@ -1457,10 +1444,10 @@
                             </mmr-state-counter>
                         </div>
                     </td>
-                    <td>Chockslag</td>
+                    <td contenteditable>Chockslag</td>
                 </tr>
                 <tr>
-                    <td><label>Torso</label></td>
+                    <td contenteditable>Torso</td>
                     <td>
                         <div>
                             <mmr-state-counter max="3">
@@ -1478,10 +1465,10 @@
                             </mmr-state-counter>
                         </div>
                     </td>
-                    <td>Dödsslag</td>
+                    <td contenteditable>Dödsslag</td>
                 </tr>
                 <tr>
-                    <td><label>V. arm</label></td>
+                    <td contenteditable>V. arm</td>
                     <td>
                         <div>
                             <mmr-state-counter max="3">
@@ -1499,10 +1486,10 @@
                             </mmr-state-counter>
                         </div>
                     </td>
-                    <td>Stridsfärdighet</td>
+                    <td contenteditable>Stridsfärdighet</td>
                 </tr>
                 <tr>
-                    <td><label>H. arm</label></td>
+                    <td contenteditable>H. arm</td>
                     <td>
                         <div>
                             <mmr-state-counter max="3">
@@ -1520,10 +1507,10 @@
                             </mmr-state-counter>
                         </div>
                     </td>
-                    <td>Stirdsfärdighet</td>
+                    <td contenteditable>Stridsfärdighet</td>
                 </tr>
                 <tr>
-                    <td><label>V. ben</label></td>
+                    <td contenteditable>V. ben</td>
                     <td>
                         <div>
                             <mmr-state-counter max="3">
@@ -1541,10 +1528,10 @@
                             </mmr-state-counter>
                         </div>
                     </td>
-                    <td>Förflyttning</td>
+                    <td contenteditable>Förflyttning</td>
                 </tr>
                 <tr>
-                    <td><label>H. ben</label></td>
+                    <td contenteditable>H. ben</td>
                     <td>
                         <div>
                             <mmr-state-counter max="3">
@@ -1562,11 +1549,11 @@
                             </mmr-state-counter>
                         </div>
                     </td>
-                    <td>Förflyttning</td>
+                    <td contenteditable>Förflyttning</td>
                 </tr>
             </table>
         </div>
-        <label>Övriga skador</label>
+        <label contenteditable>Övriga skador</label>
         <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
     </details>
 </mmr-resize-handle>
@@ -1576,19 +1563,19 @@
             <h2 contenteditable>Stridsvärden</h2>
         </summary>
         <div>
-            <label>Grundrustning</label>
+            <label contenteditable>Grundrustning</label>
             <div><input type="number" /></div>
         </div>
         <div>
-            <label>Grunskada</label>
+            <label contenteditable>Grunskada</label>
             <div><span class="ob-dice"><input type="number" />T6+<input type="number" /></span></div>
         </div>
         <details>
-            <summary>
+            <summary contenteditable>
                 Läkningstakt
                 <input type="number" />
             </summary>
-            <p>Läkningstakt påverkar läkning av benbrott, smärta och sår</p>
+            <p contenteditable>Läkningstakt påverkar läkning av benbrott, smärta och sår</p>
         </details>
     </details>
 </mmr-resize-handle>
@@ -1598,23 +1585,23 @@
             <h2 contenteditable>Magi</h2>
         </summary>
         <div>
-            <label>Max antal vävar</label>
+            <label contenteditable>Max antal vävar</label>
             <div><input type="number" /></div>
         </div>
         <div>
-            <label>Borttoning</label>
+            <label contenteditable>Borttoning</label>
             <div><input type="number" /></div>
         </div>
         <div>
-            <label>Måttlig fältstörning</label>
+            <label contenteditable>Måttlig fältstörning</label>
             <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
         </div>
         <div>
-            <label>Allvarlig fältstörning</label>
+            <label contenteditable>Allvarlig fältstörning</label>
             <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
         </div>
         <div>
-            <label>Kritisk fältstörning</label>
+            <label contenteditable>Kritisk fältstörning</label>
             <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
         </div>
     </details>
@@ -1628,8 +1615,8 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Religion</th>
-                        <th>Avvisning/</br>Välsignelse</th>
+                        <th contenteditable>Religion</th>
+                        <th contenteditable>Avvisning/</br>Välsignelse</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1648,26 +1635,26 @@
             <h2 contenteditable>Mentalt</h2>
         </summary>
         <details>
-            <summary>Frånvarande <input type="checkbox" /></summary>
-            <p>-2T6 Reaktion, Vaksamhet, Genomsöka, Speja och Spåra</p>
+            <summary contenteditable>Frånvarande <input type="checkbox" /></summary>
+            <p contenteditable>-2T6 Reaktion, Vaksamhet, Genomsöka, Speja och Spåra</p>
         </details>
         <details>
-            <summary>Förnekelse <input type="checkbox" /></summary>
-            <p>-1 fokus per scen vid konfrontation</p>
+            <summary contenteditable>Förnekelse <input type="checkbox" /></summary>
+            <p contenteditable>-1 fokus per scen vid konfrontation</p>
         </details>
         <details>
-            <summary>Katatonisk <input type="checkbox" /></summary>
-            <p>Kan ej agera</p>
+            <summary contenteditable>Katatonisk <input type="checkbox" /></summary>
+            <p contenteditable>Kan ej agera</p>
         </details>
         <details>
-            <summary>Orkeslös <input type="checkbox" /></summary>
-            <p>Inga Fokus från Nivå I för samtliga karaktärsdrag</p>
+            <summary contenteditable>Orkeslös <input type="checkbox" /></summary>
+            <p contenteditable>Inga Fokus från Nivå I för samtliga karaktärsdrag</p>
         </details>
         <details>
-            <summary>Svårkontaktbar <input type="checkbox" /></summary>
-            <p>-2T6 på Sociala färdigheter</p>
+            <summary contenteditable>Svårkontaktbar <input type="checkbox" /></summary>
+            <p contenteditable>-2T6 på Sociala färdigheter</p>
         </details>
-        <label>Störningar</label>
+        <label contenteditable>Störningar</label>
         <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
     </details>
 </mmr-resize-handle>
@@ -1692,8 +1679,8 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Namn</th>
-                        <th>Beskrivning</th>
+                        <th contenteditable>Namn</th>
+                        <th contenteditable>Beskrivning</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1715,9 +1702,9 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Beskrivning</th>
-                        <th>Vikt</th>
-                        <th>Plats</th>
+                        <th contenteditable>Beskrivning</th>
+                        <th contenteditable>Vikt</th>
+                        <th contenteditable>Plats</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1750,8 +1737,8 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Datum</th>
-                        <th>Händelse</th>
+                        <th contenteditable>Datum</th>
+                        <th contenteditable>Händelse</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1773,8 +1760,8 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Förvaring</th>
-                        <th>Värde i silver</th>
+                        <th contenteditable>Förvaring</th>
+                        <th contenteditable>Värde i silver</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -1798,19 +1785,19 @@
         </summary>
         <div class="flex-form grow">
             <div>
-                <label>Bostad</label>
+                <label contenteditable>Bostad</label>
                 <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
             </div>
             <div>
-                <label>Levnadskostnad</label>
+                <label contenteditable>Levnadskostnad</label>
                 <input/>
             </div>
             <div>
-                <label>Överskott</label>
+                <label contenteditable>Överskott</label>
                 <input/>
             </div>
             <div>
-                <label>Maximaltlån</label>
+                <label contenteditable>Maximaltlån</label>
                 <input/>
             </div>
         </div>
@@ -1859,27 +1846,27 @@
         </summary>
         <div class="flex-form grow">
             <div>
-                <label>Släktnamn</label>
+                <label contenteditable>Släktnamn</label>
                 <input/>
             </div>
             <div>
-                <label>Moder</label>
+                <label contenteditable>Moder</label>
                 <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
             </div>
             <div>
-                <label>Fader</label>
+                <label contenteditable>Fader</label>
                 <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
             </div>
             <div>
-                <label>Syskon</label>
+                <label contenteditable>Syskon</label>
                 <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
             </div>
             <div>
-                <label>Egen familj</label>
+                <label contenteditable>Egen familj</label>
                 <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
             </div>
             <div>
-                <label>Om familjen</label>
+                <label contenteditable>Om familjen</label>
                 <mmr-resize-handle><textarea></textarea></mmr-resize-handle>
             </div>
         </div>
