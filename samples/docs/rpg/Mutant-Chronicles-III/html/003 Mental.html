@@ -1,0 +1,85 @@
+<details open class="section" draggable="true">
+    <summary>
+        <h2>Mental</h2>
+    </summary>
+    <div id="dread">
+        <h3 class="header slanted after">Dread</h2>
+            <div style="display: grid; grid-template-areas:
+'a f f f f f g'
+'b f f f f f h'
+'c f f f f f i' 
+'d f f f f f j' 
+'e f f f f f k';" class="primary-background">
+                <label style="grid-area: a">20</label>
+                <label style="grid-area: b">19-20</label>
+                <label style="grid-area: c">18-20</label>
+                <label style="grid-area: d">17-20</label>
+                <label style="grid-area: e">16-20</label>
+                <mmr-state-counter max="15" columns="5" class="dread-counter" style="grid-area: f;">
+                    <template>
+                        <svg width="24" height="24">
+                            <circle cx="12" cy="12" r="11" stroke="black" fill="white" stroke-width="1"></circle>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="24" height="24">
+                            <circle cx="12" cy="12" r="11" fill="white" stroke="black" stroke-width="1"></circle>
+                            <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="24" height="24">
+                            <circle cx="12" cy="12" r="11" fill="white" stroke="black" stroke-width="1"></circle>
+                            <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                            <line x1="19" y2="19" x2="5" y1="5" stroke="black" stroke-width="2"></line>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+                <label style="grid-area: h">D1</label>
+                <label style="grid-area: i">D2</label>
+                <label style="grid-area: j">D3</label>
+                <label style="grid-area: k">D4</label>
+            </div>
+    </div>
+    <div>
+        <h3>Mental Wounds</h3>
+        <mmr-state-counter max="20" columns="10" xmlns="http://www.w3.org/1999/xhtml">
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                    </rect>
+                </svg>
+            </template>
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                </svg>
+            </template>
+        </mmr-state-counter>
+    </div>
+    <div>
+        <h3>Corruption</h3>
+        <div>
+            <div class="flex-form">
+                <div>
+                    <label>Soak</label>
+                    <input type="number"></input>
+                </div>
+            </div>
+            <mmr-state-counter max="20" columns="10" xmlns="http://www.w3.org/1999/xhtml">
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                        </rect>
+                    </svg>
+                </template>
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                    </svg>
+                </template>
+            </mmr-state-counter>
+        </div>
+    </div>
+
+</details>

@@ -1,0 +1,247 @@
+<details open>
+    <summary><h2>Wounds</h2></summary>
+    <div id="hit-location">
+        <div>
+            <div>
+                <h3>Critical Wounds</h3>
+                <mmr-state-counter max="6" columns="6" xmlns="http://www.w3.org/1999/xhtml">
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                            </rect>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+            </div>
+            <div>
+                <h3>Serious Wounds</h3>
+                <mmr-state-counter max="10" columns="10" xmlns="http://www.w3.org/1999/xhtml">
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                            </rect>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+            </div>
+        </div>
+        <mmr-svg-painter snapx="20" snapy="20" snaprotate="10">
+            <svg width="400" height="550">
+                <image xlink:href="/docs/rpg/Mutant-Chronicles-III/assets/images/body.png" width="400" height="550">
+                </image>
+                <svg width="180" height="100" x="110" y="30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Torso</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">1-2</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="110" y="310" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Torso</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">9-14</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="0" y="170" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Right
+                            arm</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">3-5</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="220" y="170" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Left
+                            arm</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">6-8</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="0" y="450" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Right
+                            arm</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">15-17</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="220" y="450" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Left
+                            leg</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">18-20</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+            </svg>
+        </mmr-svg-painter>
+    </div>
+</details>

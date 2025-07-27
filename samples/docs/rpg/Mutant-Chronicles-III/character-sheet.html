@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <title data-formula-text="@DOM('#name').select(value) $ this[0]"></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://magnulas.github.io/mmr/samples/assets/css/mmr.default.css">
+    <link rel="stylesheet" href="https://magnulas.github.io/mmr/samples/assets/css/rpg.css">
+    <link rel="stylesheet" href="https://magnulas.github.io/mmr/samples/docs/rpg/Mutant-Chronicles-III/assets/css/mutant-chronicles.css">
+    <script src="https://magnulas.github.io/mmr/lib/mmr.bundle.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.myHooks.saveWebPageOnExitHook()
+        window.myHooks.loadWebPageOnLoadHook()
+        window.myHooks.saveWebPageHook()
+        window.addEventListener("load", function () { window.myHooks.monitorDataFormulas(document) }, { once: true })
+    </script>
+</head>
+<body spellcheck="false">
+    <mmr-dynamic-grid id="character-sheet">
+        <details open>
+    <summary>
+        <h2>Character</h2>
+    </summary>
+    <div class="flex-form">
+        <div>
+            <label>Name</label>
+            <input>
+        </div>
+        <div>
+            <label>Heritage</label>
+            <input>
+        </div>
+        <div>
+            <label>Faction</label>
+            <input>
+        </div>
+        <div>
+            <label>Age</label>
+            <input>
+        </div>
+        <div>
+            <label>Education</label>
+            <input>
+        </div>
+        <div>
+            <label>Career</label>
+            <div>
+                <div><input></div>
+                <div><input></div>
+                <div><input></div>
+                <div><input></div>
+            </div>
+        </div>
+        <div>
+            <label>Ranged</label>
+            <div>
+                <input type="number"></input>ā
+            </div>
+        </div>
+        <div>
+            <label>Melee</label>
+            <div>
+                <input type="number"></input>ā
+            </div>
+        </div>
+        <div>
+            <label>Influence</label>
+            <div>
+                <input type="number"></input>ā
+            </div>
+        </div>
+        <div>
+            <label>Earnings</label>
+            <input type="number">
+        </div>
+        <div>
+            <label>Experience</label>
+            <input type="number" style="width: 100px;">
+        </div>
+        <div>
+            <label>Assets</label>
+            <input type="number">
+        </div>
+        <div>
+            <label>Traits</label>
+            <textarea></textarea>
+        </div>
+        <div>
+            <label>Events</label>
+            <textarea></textarea>
+        </div>
+        <div>
+            <label>Relationships</label>
+            <textarea></textarea>
+        </div>
+    </div>
+</details>
+
+<details open>
+    <summary><h2>Wounds</h2></summary>
+    <div id="hit-location">
+        <div>
+            <div>
+                <h3>Critical Wounds</h3>
+                <mmr-state-counter max="6" columns="6" xmlns="http://www.w3.org/1999/xhtml">
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                            </rect>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+            </div>
+            <div>
+                <h3>Serious Wounds</h3>
+                <mmr-state-counter max="10" columns="10" xmlns="http://www.w3.org/1999/xhtml">
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                            </rect>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="16" height="16">
+                            <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+            </div>
+        </div>
+        <mmr-svg-painter snapx="20" snapy="20" snaprotate="10">
+            <svg width="400" height="550">
+                <image xlink:href="/docs/rpg/Mutant-Chronicles-III/assets/images/body.png" width="400" height="550">
+                </image>
+                <svg width="180" height="100" x="110" y="30" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Torso</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">1-2</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="110" y="310" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Torso</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">9-14</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="0" y="170" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Right
+                            arm</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">3-5</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="220" y="170" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Left
+                            arm</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">6-8</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="0" y="450" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Right
+                            arm</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">15-17</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+                <svg width="180" height="100" x="220" y="450" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <g class="svg-border">
+                        <path d="m2 23v74h176v-95h-57l-22 21z" />
+                        <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z" />
+                        <line x1="65" x2="65" y1="30" y2="90" />
+                    </g>
+                    <path d="m29 20 15-15h69l-15 15z" class="svg-fill" />
+                    <text x="70" y="17" class="svg-fill-secondary" font-size="10px" text-align="center"
+                        text-anchor="middle">Location</text>
+                    <g class="svg-fill" font-size="18px">
+                        <text x="34" y="43.5" text-align="center" text-anchor="middle">Soak</text>
+                        <text x="125" y="43.5" font-weight="bold" text-align="center" text-anchor="middle">Left
+                            leg</text>
+                        <text x="175" y="21" text-align="end" text-anchor="end">18-20</text>
+                    </g>
+                    <foreignObject x="70" y="50" width="105" height="60">
+                        <mmr-state-counter max="10" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent"
+                                        stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="16" height="16">
+                                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </foreignObject>
+                    <foreignObject x="15" y="55" width="40" height="40">
+                        <input type="number" xmlns="http://www.w3.org/1999/xhtml"></input>
+                    </foreignObject>
+                </svg>
+            </svg>
+        </mmr-svg-painter>
+    </div>
+</details>
+<details open class="section" draggable="true">
+    <summary>
+        <h2>Mental</h2>
+    </summary>
+    <div id="dread">
+        <h3 class="header slanted after">Dread</h2>
+            <div style="display: grid; grid-template-areas:
+'a f f f f f g'
+'b f f f f f h'
+'c f f f f f i' 
+'d f f f f f j' 
+'e f f f f f k';" class="primary-background">
+                <label style="grid-area: a">20</label>
+                <label style="grid-area: b">19-20</label>
+                <label style="grid-area: c">18-20</label>
+                <label style="grid-area: d">17-20</label>
+                <label style="grid-area: e">16-20</label>
+                <mmr-state-counter max="15" columns="5" class="dread-counter" style="grid-area: f;">
+                    <template>
+                        <svg width="24" height="24">
+                            <circle cx="12" cy="12" r="11" stroke="black" fill="white" stroke-width="1"></circle>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="24" height="24">
+                            <circle cx="12" cy="12" r="11" fill="white" stroke="black" stroke-width="1"></circle>
+                            <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                        </svg>
+                    </template>
+                    <template>
+                        <svg width="24" height="24">
+                            <circle cx="12" cy="12" r="11" fill="white" stroke="black" stroke-width="1"></circle>
+                            <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                            <line x1="19" y2="19" x2="5" y1="5" stroke="black" stroke-width="2"></line>
+                        </svg>
+                    </template>
+                </mmr-state-counter>
+                <label style="grid-area: h">D1</label>
+                <label style="grid-area: i">D2</label>
+                <label style="grid-area: j">D3</label>
+                <label style="grid-area: k">D4</label>
+            </div>
+    </div>
+    <div>
+        <h3>Mental Wounds</h3>
+        <mmr-state-counter max="20" columns="10" xmlns="http://www.w3.org/1999/xhtml">
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                    </rect>
+                </svg>
+            </template>
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                </svg>
+            </template>
+        </mmr-state-counter>
+    </div>
+    <div>
+        <h3>Corruption</h3>
+        <div>
+            <div class="flex-form">
+                <div>
+                    <label>Soak</label>
+                    <input type="number"></input>
+                </div>
+            </div>
+            <mmr-state-counter max="20" columns="10" xmlns="http://www.w3.org/1999/xhtml">
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                        </rect>
+                    </svg>
+                </template>
+                <template>
+                    <svg width="16" height="16">
+                        <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                    </svg>
+                </template>
+            </mmr-state-counter>
+        </div>
+    </div>
+
+</details>
+<details open>
+    <summary><h2>Status effects</h2></summary>
+    <div class="flex-form">
+        <div>
+            <h3>Critical injury</h3>
+            <textarea></textarea>
+        </div>
+        <div>
+            <h3>Status effects</h3>
+            <textarea></textarea>
+        </div>
+        <div>
+            <h3>Madness</h3>
+            <textarea></textarea>
+        </div>
+    </div>
+</details>
+<mmr-resize-handle draggable="true">
+    <details open class="section" id="attributes">
+        <summary>
+            <h2 contenteditable>Attributes & Skills</h2>
+        </summary>
+        <details open>
+            <summary>
+                <h3 class="attribute">Agility<span><input type="number">(+<input type="number"/>)</span></h3></summary>
+            <table>
+            <table>
+                <thead>
+                    <th>Skill</th>
+                    <th>Sig.</th>
+                    <th>Exp.</th>
+                    <th>Focus</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Acrobatics</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="number"/></td>
+                        <td><input type="number"/></td>
+                    </tr>
+                    <tr>
+                        <td>Close Combat</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="number"/></td>
+                        <td><input type="number"/></td>
+                    </tr>
+                    <tr>
+                        <td>- Unarmed Combat</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="number"/></td>
+                        <td><input type="number"/></td>
+                    </tr>
+                    <tr>
+                        <td>Stealth</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="number"/></td>
+                        <td><input type="number"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </details>
+        <details open>
+            <summary>
+                <h3 class="attribute">Awarness<span><input type="number">(+<input type="number"/>)</span></h3></summary>
+            <table>
+                <thead>
+                    <th>Skill</th>
+                    <th>Sig.</th>
+                    <th>Exp.</th>
+                    <th>Focus</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Observation</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="number"/></td>
+                        <td><input type="number"/></td>
+                    </tr>
+                    <tr>
+                        <td>- Insight</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="number"/></td>
+                        <td><input type="number"/></td>
+                    </tr>
+                    <tr>
+                        <td>Thievery</td>
+                        <td><input type="checkbox"/></td>
+                        <td><input type="number"/></td>
+                        <td><input type="number"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </details>
+        
+    </details>
+</mmr-resize-handle>
+<details open>
+    <summary>
+        <h2>Talents</h2>
+    </summary>
+    <mmr-block>
+        <div draggable="true">
+            <div>
+                <label>Name</label>
+                <input></input>
+                <label>Skill</label>
+                <input></input>
+            </div>
+            <div>
+                <label>Effect</label>
+                <textarea></textarea>
+            </div>
+        </div>
+    </mmr-block>
+</details>
+<details open class="section" draggable="true">
+    <summary>
+        <h2 contenteditable>Chronicle Points</h2>
+    </summary>
+    <div class="flex-form">
+        <div>
+            <label>Starting pool</label>
+            <input type="number"></input>
+        </div>
+    </div>
+    <div style="padding: 4px">
+        <mmr-state-counter max="5" columns="5" xmlns="http://www.w3.org/1999/xhtml">
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" fill="transparent" stroke-width="1">
+                    </rect>
+                </svg>
+            </template>
+            <template>
+                <svg width="16" height="16">
+                    <rect x="1" y="1" width="14" height="14" stroke="black" stroke-width="1"></rect>
+                </svg>
+            </template>
+        </mmr-state-counter>
+    </div>
+</details>
+<details open>
+    <summary>
+        <h2>Spells</h2>
+    </summary>
+    <mmr-block>
+        <div draggable="true">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Diff.</th>
+                        <th>Target</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input></input>
+                        </td>
+                        <td>
+                            <select>
+                                <option value=""></option>
+                                <option value="Mutation">Mutation</option>
+                                <option value="Light">Light</option>
+                                <option value="Ki">Ki</option>
+                                <option value="Dark gift">Dark gift</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input style="width: 30px;"></input>
+                        </td>
+                        <td>
+                            <input></input>
+                        </td>
+                        <td>
+                            <input></input>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Effect</th>
+                        <td colspan="4">
+                            <textarea></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mmr-block>
+</details>
+<details open class="section" draggable="true">
+    <summary>
+        <h2 contenteditable>Weapons</h2>
+    </summary>
+    <mmr-block id="weapons">
+        <div draggable="true">
+            <div>
+                <label>Name</label>
+                <input></input>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rng</th>
+                        <th>Damage</th>
+                        <th>Mode</th>
+                        <th>Enc</th>
+                        <th>Size</th>
+                        <th>Rel.</th>
+                        <th>Reloads</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>
+                        <select>
+                            <option value=""></option>
+                            <option value="-">-</option>
+                            <option value="C">C</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                    </td>
+                    <td><input type="number">+<input type="number">ā</td>
+                    <td><input style="width: 10ch"></td>
+                    <td><input type="number"></td>
+                    <td>
+                        <select>
+                            <option value=""></option>
+                            <option value="1H">1H</option>
+                            <option value="Unbalanced">Unb.</option>
+                            <option value="2H">2H</option>
+                        </select>
+                    </td>
+                    <td><input type="number"></td>
+                    <td>
+                        <mmr-state-counter max="5">
+                            <template>
+                                <svg width="24" height="24">
+                                    <circle cx="12" cy="12" r="11" stroke="black" fill="transparent" stroke-width="1">
+                                    </circle>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="24" height="24">
+                                    <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1">
+                                    </circle>
+                                    <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <label>Qualities</label>
+                <textarea></textarea>
+            </div>
+        </div>
+    </mmr-block>
+</details>
+<details open>
+    <summary>
+        <h2>Belongings</h2>
+    </summary>
+    <mmr-table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Load</th>
+                    <th>Enc.</th>
+                    <th>Rel.</th>
+                    <th>Res.</th>
+                    <th>Cost</th>
+                    <th>Maint.</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><textarea></textarea></td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>Total Load</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>Max Load</td>
+                    <td><input type="number"></td>
+                </tr>
+            </tbody>
+        </table>
+    </mmr-table>
+</details>
+
+
+
+
+
+    </mmr-dynamic-grid>
+</body>
+</html>
+        
