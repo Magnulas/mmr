@@ -1,0 +1,299 @@
+@font-face {
+    font-family: "MutantChroniclesIII";
+    src: url("../fonts/Mutant-Chronicles-III.woff2") format('woff2');
+}
+
+body {
+    font-family: MutantChroniclesIII;
+    background: url('../images/background.png') repeat;
+    --primary-color: rgb(100, 68, 35);
+    --secondary-color: rgb(255, 255, 255);
+}
+
+div:has(> label + input){
+    display: flex;
+    align-items: stretch !important;
+}
+
+label,
+thead th,
+.primary-background,
+.attribute {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+label {
+    align-self: start;
+}
+
+.flex-form>* {
+    gap: 0px;
+}
+
+label,
+h2,
+h3 {
+    padding: 4px;
+}
+
+div:has(>label+textarea){
+    display: flex;
+    align-items: stretch;
+    gap: 0px;
+}
+div:has(>label+textarea) > textarea {
+    flex-grow: 1
+}
+
+label+input {
+    padding: 0px;
+}
+
+.attribute {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+label + input[type="number"]{
+    width: 4ch;
+}
+
+input[type="number"] {
+    width: 2ch;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+select {
+    background-color: white;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+#attributes thead {
+    font-size: 10px;
+    text-align: left;
+}
+
+#attributes table {
+    width: 100%;
+}
+
+#attributes table th:first-child {
+    width: 100%;
+}
+
+#dread>h3 {
+    width: fit-content;
+}
+
+#dread>* {
+    padding: 4px;
+}
+
+#dread>h3 {
+    padding-right: 20px;
+    margin-right: 50px;
+}
+
+mmr-state-counter.dread-counter {
+    grid-template-columns: repeat(5, auto) !important;
+    grid-auto-flow: unset !important;
+}
+
+mmr-state-counter.dread-counter::part(value-0) {
+    grid-column: span 5;
+    text-align: left;
+    width: 100%;
+}
+
+mmr-state-counter.dread-counter::part(value-2) {
+    grid-column: span 4;
+    text-align: left;
+    width: 100%;
+}
+
+mmr-state-counter.dread-counter::part(value-5) {
+    grid-column: span 3;
+    text-align: left;
+    width: 100%;
+}
+
+mmr-state-counter.dread-counter::part(value-9) {
+    grid-column: span 2;
+    text-align: left;
+    width: 100%;
+}
+
+summary {
+    display: flex;
+    gap: 4px;
+}
+
+h2,
+h3 {
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+h2 input,
+h3 input,
+.header input {
+    color: var(--primary-color);
+    background: var(--secondary-color);
+}
+
+.header,
+.header::after,
+thead {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#hit-location {
+    display: flex;
+    flex-direction: column
+}
+
+#hit-location>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#hit-location>div>div {
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+}
+
+#hit-location svg {
+    overflow: visible;
+}
+
+.svg-border {
+    stroke: var(--primary-color);
+    fill: none;
+}
+
+.svg-fill {
+    fill: var(--primary-color);
+}
+
+.svg-fill-secondary {
+    fill: var(--secondary-color);
+}
+
+#hit-location svg text {
+    text-transform: uppercase;
+}
+
+#hit-location svg foreignObject input {
+    background: transparent;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    width: 100%;
+    padding: 0px;
+    font-weight: bold;
+}
+
+label {
+    border: 1px solid var(--primary-color);
+}
+
+input,
+textarea,
+select {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    columns: var(--primary-color);
+}
+
+th {
+    padding: 4px;
+}
+
+.slanted,
+.slanted-small {
+    display: block;
+    position: relative;
+    margin: 0px;
+}
+
+.slanted.before {
+    padding-left: 20px;
+}
+
+.slanted.after {
+    padding-right: 20px;
+}
+
+.slanted.after::after,
+.slanted-small.after::after,
+.slanted.before::before,
+.slanted-before.before::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+}
+
+.slanted.after::after,
+.slanted.before::before {
+    width: 40px;
+}
+
+.slanted-small.after::after,
+.slanted-small.before::before {
+    width: 20px;
+}
+
+.slanted.after::after,
+.slanted-small.after::after {
+    left: 100%;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 0 0);
+}
+
+.slanted.before::before {
+    left: -40px;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 0 0);
+}
+
+.slanted-small.before::before {
+    left: -20px;
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 0 0);
+}
+
+td > textarea {
+    width: 100%;
+}

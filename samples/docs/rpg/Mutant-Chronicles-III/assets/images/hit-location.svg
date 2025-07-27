@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#5e3b1f">
+  <path d="m2 23v74h176v-95h-57l-22 21z"/>
+  <path d="m15 49h39.5v24c0 15-8 15-21 19-10-5-18-5-18-19z"/>
+  <line x1="68" x2="68" y1="30" y2="90"/>
+ </g>
+ <path d="m29 20 15-15h69l-15 15z" fill="#5e3b1f"/>
+ <text x="70" y="17" fill="#ffffff" font-size="12px"><tspan text-align="center" text-anchor="middle">Location</tspan></text>
+ <g fill="#5e3b1f" font-size="18px">
+  <text x="34" y="43.5"><tspan text-align="center" text-anchor="middle">SOAK</tspan></text>
+  <text x="125" y="43.5"><tspan font-weight="bold" text-align="center" text-anchor="middle">TORSO</tspan></text>
+  <text x="175" y="21"><tspan text-align="end" text-anchor="end">9-14</tspan></text>
+ </g>
+</svg>

@@ -1,0 +1,71 @@
+<details open class="section" draggable="true">
+    <summary>
+        <h2 contenteditable>Weapons</h2>
+    </summary>
+    <mmr-block id="weapons">
+        <div draggable="true">
+            <div>
+                <label>Name</label>
+                <input></input>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rng</th>
+                        <th>Damage</th>
+                        <th>Mode</th>
+                        <th>Enc</th>
+                        <th>Size</th>
+                        <th>Rel.</th>
+                        <th>Reloads</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>
+                        <select>
+                            <option value=""></option>
+                            <option value="-">-</option>
+                            <option value="C">C</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                    </td>
+                    <td><input type="number">+<input type="number">ā</td>
+                    <td><input style="width: 10ch"></td>
+                    <td><input type="number"></td>
+                    <td>
+                        <select>
+                            <option value=""></option>
+                            <option value="1H">1H</option>
+                            <option value="Unbalanced">Unb.</option>
+                            <option value="2H">2H</option>
+                        </select>
+                    </td>
+                    <td><input type="number"></td>
+                    <td>
+                        <mmr-state-counter max="5">
+                            <template>
+                                <svg width="24" height="24">
+                                    <circle cx="12" cy="12" r="11" stroke="black" fill="transparent" stroke-width="1">
+                                    </circle>
+                                </svg>
+                            </template>
+                            <template>
+                                <svg width="24" height="24">
+                                    <circle cx="12" cy="12" r="11" fill="transparent" stroke="black" stroke-width="1">
+                                    </circle>
+                                    <line x1="19" y1="19" x2="5" y2="5" stroke="black" stroke-width="2"></line>
+                                </svg>
+                            </template>
+                        </mmr-state-counter>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <label>Qualities</label>
+                <textarea></textarea>
+            </div>
+        </div>
+    </mmr-block>
+</details>
